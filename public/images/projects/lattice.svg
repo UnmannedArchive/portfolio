@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#0c0c10"/>
+  <path d="M0 280 Q200 200 400 260 T800 240 V450 H0Z" fill="url(#g)" opacity="0.4"/>
+  <circle cx="420" cy="160" r="90" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none"/>
+  <circle cx="420" cy="160" r="50" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/>
+  <defs><linearGradient id="g" x1="400" y1="0" x2="400" y2="450"><stop stop-color="#4a5568"/><stop offset="1" stop-color="#0c0c10"/></linearGradient></defs>
+  <text x="40" y="60" fill="#fff" font-family="system-ui" font-size="22" font-weight="600">Lattice</text>
+  <text x="40" y="90" fill="#aaa" font-family="system-ui" font-size="13">Patent intelligence � ML</text>
+</svg>

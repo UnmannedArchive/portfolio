@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#0c1014"/>
+  <rect x="80" y="120" width="640" height="8" rx="4" fill="rgba(255,255,255,0.12)"/>
+  <rect x="80" y="150" width="480" height="8" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <rect x="80" y="180" width="560" height="8" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="40" y="60" fill="#fff" font-family="system-ui" font-size="22" font-weight="600">Grant intelligence</text>
+  <text x="40" y="90" fill="#aaa" font-family="system-ui" font-size="13">180 DC � NLP scoring</text>
+</svg>

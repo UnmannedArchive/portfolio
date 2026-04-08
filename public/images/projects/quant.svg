@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#08080c"/>
+  <polyline points="40,320 140,240 240,280 340,180 440,220 540,140 640,200 760,100" stroke="rgba(255,255,255,0.45)" stroke-width="2" fill="none"/>
+  <text x="40" y="60" fill="#fff" font-family="system-ui" font-size="22" font-weight="600">Quant research</text>
+  <text x="40" y="90" fill="#aaa" font-family="system-ui" font-size="13">Signals � portfolios</text>
+</svg>

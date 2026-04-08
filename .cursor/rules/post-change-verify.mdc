@@ -1,0 +1,15 @@
+---
+description: After substantive portfolio edits, verify build and smoke-check the running dev server without waiting for the user.
+globs: portfolio/**/*
+alwaysApply: false
+---
+
+# Post-change verification (portfolio)
+
+After **any substantive change** to this Next.js app—components, `app/`, `lib/`, styles, config, or dependencies—**do not** end the turn until verification is done. The user should not need to ask to “open it” or reload.
+
+1. **Build:** From `portfolio/`, run `npm run build` and fix failures until it passes.
+2. **Smoke-check:** If a dev server is likely running on port **3060** (or the port last used in this project), run `curl -s -o /dev/null -w "%{http_code}" http://localhost:3060/` (try **3070** if 3060 fails). A `200` confirms the home page responds. If nothing listens, start `npm run dev -- -p 3060` in the background, wait until ready, then `curl` again.
+3. **Report briefly:** State that build passed and HTTP check result (or that dev server was started).
+
+Skip only for trivial one-line typo fixes in comments, unless the user is debugging runtime issues.

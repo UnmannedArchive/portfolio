@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#0a0a0f"/>
+  <rect x="60" y="100" width="200" height="120" rx="8" stroke="rgba(255,255,255,0.2)" fill="rgba(255,255,255,0.04)"/>
+  <rect x="300" y="100" width="200" height="120" rx="8" stroke="rgba(255,255,255,0.2)" fill="rgba(255,255,255,0.04)"/>
+  <rect x="540" y="100" width="200" height="120" rx="8" stroke="rgba(255,255,255,0.2)" fill="rgba(255,255,255,0.04)"/>
+  <path d="M160 220 L400 280 L640 200" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" fill="none"/>
+  <text x="40" y="60" fill="#fff" font-family="system-ui" font-size="22" font-weight="600">Behavioral Lab ML</text>
+  <text x="40" y="90" fill="#aaa" font-family="system-ui" font-size="13">LLM � RLHF � data pipeline</text>
+</svg>

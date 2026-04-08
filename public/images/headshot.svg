@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1a1a22"/>
+      <stop offset="1" stop-color="#0a0a10"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="200" y1="40" x2="200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+  <circle cx="200" cy="200" r="200" fill="url(#bg)"/>
+  <circle cx="200" cy="200" r="188" stroke="url(#ring)" stroke-width="2"/>
+  <text x="200" y="228" text-anchor="middle" fill="#e5e5e5" font-family="system-ui, sans-serif" font-size="72" font-weight="600" letter-spacing="0.02em">JS</text>
+  <text x="200" y="268" text-anchor="middle" fill="#a3a3a3" font-family="system-ui, sans-serif" font-size="14" letter-spacing="0.35em">PHOTO</text>
+</svg>
