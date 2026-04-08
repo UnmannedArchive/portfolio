@@ -146,6 +146,19 @@ export const experience: ExperienceItem[] = [
       "Engineered a custom GPT-based LLM parser to automate extraction, variable classification, and summary generation, cutting manual analysis by 3+ hours on datasets exceeding 1,000 observations.",
     ],
   },
+  {
+    period: "November 2021 – May 2023",
+    role: "Dean's Assistant",
+    org: "Chaffey College",
+    location: "Rancho Cucamonga, California",
+    summaryPlain:
+      "I supported the Dean's office and ran the technical backbone for campus-wide events — logistics, A/V, and IT across the Health and Sciences campus.",
+    bullets: [
+      "Provided the Dean of Chaffey College and administration support by carrying out administrative duties.",
+      "Oversaw logistical and technical aspects of school-wide events, coordinating activities for over 2,000 attendees on a monthly basis.",
+      "Managed technology for the Chaffey College Health and Sciences campus, ensuring optimal functionality and professor/student experience.",
+    ],
+  },
 ];
 
 export const leadership: ExperienceItem[] = [
