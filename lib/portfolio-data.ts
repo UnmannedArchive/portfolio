@@ -22,6 +22,14 @@ export const educationPrograms: {
       note: "Cumulative GPA.",
     },
   },
+  {
+    school: "Community College",
+    location: "California",
+    degree: "A.A. in Anthropology",
+    detail:
+      "Foundation in cultural and biological anthropology — transferred to USC.",
+    end: "Completed",
+  },
 ];
 
 export const relevantCoursework = [
