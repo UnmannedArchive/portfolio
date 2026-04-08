@@ -23,11 +23,12 @@ export const educationPrograms: {
     },
   },
   {
-    school: "Community College",
-    location: "California",
-    degree: "A.A. in Anthropology",
+    school: "Chaffey College",
+    location: "Rancho Cucamonga, California",
+    degree:
+      "A.S. in Business Administration 2.0 for Transfer (AA-T); A.A. in Anthropology",
     detail:
-      "Foundation in cultural and biological anthropology — transferred to USC.",
+      "Honors: Exemplary Honors, USC Transfer Merit Scholar, 2023 Honors Transfer Council of California Presenter. Transferred to USC.",
     end: "Completed",
   },
 ];
@@ -69,11 +70,25 @@ export const awards: Award[] = [
       "Renewed merit-based and Dean’s scholarship support — typically reflects sustained academic performance and contribution within Marshall.",
   },
   {
-    title: "UCI HTCC Presenter",
-    issuer: "UC Irvine — Honors Transfer Council of California",
+    title: "USC Transfer Merit Scholar",
+    issuer: "University of Southern California",
     year: "—",
     detail:
-      "Honors transfer showcase: selected to present research or academic work to the HTCC community — competitive slot for strong community-college-to-university pathways.",
+      "Merit scholarship awarded to high-achieving transfer students admitted to USC.",
+  },
+  {
+    title: "Exemplary Honors",
+    issuer: "Chaffey College",
+    year: "—",
+    detail:
+      "Highest academic distinction at Chaffey College — awarded for sustained excellence across coursework.",
+  },
+  {
+    title: "HTCC Presenter (2023)",
+    issuer: "Honors Transfer Council of California",
+    year: "2023",
+    detail:
+      "Selected to present research at the annual Honors Transfer Council of California conference — competitive slot for top community-college scholars.",
   },
   {
     title: "Grismer Scholar",
@@ -156,6 +171,19 @@ export const leadership: ExperienceItem[] = [
     bullets: [
       "Engineered a proprietary Python quantitative trading system with ensemble ML (gradient boosting and LSTM) and NLP sentiment on earnings calls and news to generate alpha signals across equities and fixed income.",
       "Conducted cross-sector equity research (technology and healthcare) with DCF and comparable-company models in Python and Excel; applied factor-based portfolio construction and mean-variance optimization for recommendations to BlackGen’s investment committee.",
+    ],
+  },
+  {
+    period: "August 2021 – Present",
+    role: "Founder & President",
+    org: "Student For Students (SFS)",
+    location: "Rancho Cucamonga, California",
+    summaryPlain:
+      "I started SFS at Chaffey College to give students the peer support I wished I had — free tutoring, Zoom study groups, and a growth-mindset community that's now helped 40+ students ages 18–41.",
+    bullets: [
+      "Founded one of Chaffey College's most prominent youth organizations, establishing a nonprofit tutoring program on campus that facilitated academic success and fostered a growth mindset among fellow students.",
+      "Provided free tutoring through Zoom study groups, creating personal relationships with classmates and achieving highly successful academic outcomes.",
+      "Recruited and managed a team of volunteers utilizing virtual platforms for study groups, scaling from a solo effort to a recognized campus organization.",
     ],
   },
   {
