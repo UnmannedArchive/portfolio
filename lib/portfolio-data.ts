@@ -174,6 +174,18 @@ export const leadership: ExperienceItem[] = [
     ],
   },
   {
+    period: "August 2023 – Present",
+    role: "Vice President",
+    org: "African Diaspora Social Society (D Society)",
+    location: "Los Angeles, California",
+    summaryPlain:
+      "I help run D Society's fundraising and event operations — raising five figures each semester and producing campus events that regularly draw 250+ attendees.",
+    bullets: [
+      "Lead campaigns to raise a minimum of $25,000 per semester and secure 3+ new sponsorships or partnerships to support the society's activities and growth.",
+      "Oversee the organization of 5+ major events annually, coordinating logistics, marketing, and partnerships to ensure high-quality experiences with 250+ attendees per event.",
+    ],
+  },
+  {
     period: "August 2021 – Present",
     role: "Founder & President",
     org: "Student For Students (SFS)",
