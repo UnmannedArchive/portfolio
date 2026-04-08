@@ -175,6 +175,18 @@ export const leadership: ExperienceItem[] = [
     ],
   },
   {
+    period: "January 2024 – Present",
+    role: "Senior Advisor & Consultant",
+    org: "180 Degrees Consulting at USC",
+    location: "Los Angeles, California",
+    summaryPlain:
+      "180 is hyper-selective consulting for nonprofits—I lead work that feels like mini–due diligence: find the best use of scarce capital, document it, and present to clients who matter.",
+    bullets: [
+      "Selected into 180 Degrees Consulting (~sub-3% acceptance); used AI-powered research and quantitative screening to evaluate investment-grade funding opportunities, synthesizing financial, demographic, and mission-alignment signals via LLM-assisted analysis for capital allocation.",
+      "Built an AI-driven grant scoring model for the National Health Foundation — NLP classification across 20+ national funding sources to rank opportunities by expected value and strategic fit, mirroring buyside research and portfolio construction workflows.",
+    ],
+  },
+  {
     period: "August 2023 – Present",
     role: "Portfolio Analyst",
     org: "BlackGen Capital USC",
@@ -209,18 +221,6 @@ export const leadership: ExperienceItem[] = [
       "Founded one of Chaffey College's most prominent youth organizations, establishing a nonprofit tutoring program on campus that facilitated academic success and fostered a growth mindset among fellow students.",
       "Provided free tutoring through Zoom study groups, creating personal relationships with classmates and achieving highly successful academic outcomes.",
       "Recruited and managed a team of volunteers utilizing virtual platforms for study groups, scaling from a solo effort to a recognized campus organization.",
-    ],
-  },
-  {
-    period: "January 2024 – Present",
-    role: "Senior Advisor & Consultant",
-    org: "180 Degrees Consulting at USC",
-    location: "Los Angeles, California",
-    summaryPlain:
-      "180 is hyper-selective consulting for nonprofits—I lead work that feels like mini–due diligence: find the best use of scarce capital, document it, and present to clients who matter.",
-    bullets: [
-      "Selected into 180 Degrees Consulting (~sub-3% acceptance); used AI-powered research and quantitative screening to evaluate investment-grade funding opportunities, synthesizing financial, demographic, and mission-alignment signals via LLM-assisted analysis for capital allocation.",
-      "Built an AI-driven grant scoring model for the National Health Foundation — NLP classification across 20+ national funding sources to rank opportunities by expected value and strategic fit, mirroring buyside research and portfolio construction workflows.",
     ],
   },
 ];
