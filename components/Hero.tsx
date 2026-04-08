@@ -41,8 +41,8 @@ export function Hero() {
             transition={{ duration: 0.55, delay: 0.14, ease }}
             className="mt-6 max-w-2xl text-base font-medium leading-relaxed tracking-wide text-chrome-silver sm:text-lg"
           >
-            Co-founder · USC Marshall (B.S. · M.S. in Finance (PDP)) · AI |
-            Finance | Markets | Intellectual property
+            Co-founder · USC Merit Scholar · USC Marshall (B.S. · M.S. in
+            Finance (PDP)) · AI | Finance | Markets | Intellectual Property
           </motion.p>
 
           <motion.p
