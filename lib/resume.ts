@@ -7,5 +7,5 @@ export const resume = {
   label: "Resume",
   fileName: "Joseph-Solomon-Resume.pdf",
   /** Re-check after replacing the file (`wc -c public/joseph-solomon-resume.pdf`). */
-  sizeLabel: "~153 KB",
+  sizeLabel: "~150 KB",
 } as const;
