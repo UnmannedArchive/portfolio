@@ -19,10 +19,45 @@ body {
   background: var(--background);
 }
 
+/* Custom scrollbar — thin, unobtrusive */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
 /* Subtle film grain — reads as starfield depth on OLED black */
 .noise-overlay {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
   mix-blend-mode: overlay;
+}
+
+/* Nav link underline — scale from left on hover */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
 }
 
 @layer utilities {
@@ -30,7 +65,6 @@ body {
     text-wrap: balance;
   }
 
-  /* Metallic chrome edge for panels */
   .chrome-panel {
     @apply border border-white/[0.08] bg-white/[0.03] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.07),0_12px_40px_-12px_rgba(0,0,0,0.9)];
     backdrop-filter: blur(12px);
@@ -43,7 +77,7 @@ body {
 
 @layer base {
   ::selection {
-    @apply bg-white/20 text-white;
+    @apply bg-white/15 text-white;
   }
 }
 

@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { ResumePdfLink } from "@/components/ResumePdfLink";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -10,132 +9,104 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative z-10 flex min-h-[100dvh] flex-col justify-center px-4 pb-16 pt-24 sm:px-6 sm:pb-20 sm:pt-28"
+      className="relative z-10 flex min-h-[100dvh] flex-col justify-center px-4 sm:px-6"
     >
-      <div className="mx-auto grid w-full max-w-5xl gap-10 lg:grid-cols-[1fr_200px] lg:items-center">
-        <div>
-          <motion.div
-            initial={{ y: 16 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.55, ease }}
-            className="mb-6 flex items-center gap-3"
-          >
-            <span className="h-px w-12 bg-gradient-to-r from-white/50 to-transparent" />
-            <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-chrome-mist">
-              AI | Finance | Product
-            </span>
-          </motion.div>
-
-          <motion.h1
-            initial={{ y: 20 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.65, delay: 0.06, ease }}
-            className="text-balance text-4xl font-semibold leading-[1.05] tracking-[0.02em] text-white sm:text-5xl md:text-6xl lg:text-[4.25rem]"
-          >
-            Joseph Solomon
-          </motion.h1>
-
-          <motion.p
-            initial={{ y: 16 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.55, delay: 0.14, ease }}
-            className="mt-6 max-w-2xl text-base font-medium leading-relaxed tracking-wide text-chrome-silver sm:text-lg"
-          >
-            Co-founder · USC Merit Scholar · USC Marshall (B.S. · M.S. in
-            Finance (PDP)) · AI | Finance | Markets | Intellectual Property
-          </motion.p>
-
-          <motion.p
-            initial={{ y: 14 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.55, delay: 0.22, ease }}
-            className="mt-8 max-w-xl text-pretty text-base leading-[1.75] text-chrome-steel sm:text-lg"
-          >
-            Building Lattice (pharma IP analytics), shipping quant and LLM
-            systems, and turning complex financial and research data into
-            clear decisions.
-          </motion.p>
-
-          <motion.div
-            initial={{ y: 12 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.45, delay: 0.34, ease }}
-            className="mt-10 flex flex-wrap gap-3"
-          >
-            <motion.a
-              href="#projects"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 22 }}
-              className="inline-flex items-center justify-center bg-white px-8 py-3 text-sm font-semibold text-black shadow-[0_0_32px_-8px_rgba(255,255,255,0.4)] transition hover:bg-chrome-ice"
-            >
-              See the work
-            </motion.a>
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 22 }}
-              className="inline-flex items-center justify-center border border-white/25 bg-white/[0.06] px-8 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:border-white/40 hover:bg-white/[0.1]"
-            >
-              Get in touch
-            </motion.a>
-            <ResumePdfLink className="inline-flex items-center justify-center border border-white/15 px-8 py-3 text-sm font-semibold text-chrome-steel transition hover:border-white/30 hover:text-white">
-              Resume
-            </ResumePdfLink>
-          </motion.div>
-        </div>
-
+      <div className="mx-auto w-full max-w-5xl">
+        {/* Eyebrow */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2, ease }}
-          className="mx-auto flex shrink-0 justify-center lg:mx-0 lg:justify-end"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease }}
+          className="mb-8 flex items-center gap-4"
         >
-          <div className="relative flex h-44 w-44 items-center justify-center overflow-hidden rounded-2xl border border-white/15 bg-chrome-deep shadow-[0_0_48px_-12px_rgba(255,255,255,0.25)] sm:h-52 sm:w-52">
-            <Image
-              src="/images/headshot.svg"
-              alt="Joseph Solomon — replace with your professional headshot (swap file at public/images/headshot.svg or use headshot.jpg)"
-              width={208}
-              height={208}
-              className="max-h-full max-w-full object-contain"
-              priority
-            />
-          </div>
+          <span className="h-px w-16 origin-left animate-line-grow bg-gradient-to-r from-white/60 to-transparent" />
+          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-chrome-mist/80">
+            AI | Finance | Product
+          </span>
+        </motion.div>
+
+        {/* Name — the biggest thing on the page */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.08, ease }}
+          className="font-display text-[clamp(3rem,8vw,7rem)] leading-[0.95] tracking-[-0.02em] text-white"
+        >
+          Joseph
+          <br />
+          <span className="text-chrome-ice/90">Solomon</span>
+        </motion.h1>
+
+        {/* Subtitle — serif italic creates tension against the sans body */}
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2, ease }}
+          className="mt-8 max-w-xl text-[15px] leading-[1.8] text-chrome-steel sm:text-base"
+        >
+          Co-founder of{" "}
+          <strong className="font-medium text-white">Lattice</strong> — building
+          pharma IP analytics. USC Merit Scholar. Marshall School of Business
+          (B.S. + M.S. Finance). Shipping quant systems, LLM pipelines, and
+          research that moves capital.
+        </motion.p>
+
+        {/* CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.36, ease }}
+          className="mt-12 flex flex-wrap items-center gap-4"
+        >
+          <motion.a
+            href="#projects"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: "spring", stiffness: 500, damping: 24 }}
+            className="group relative inline-flex items-center justify-center overflow-hidden bg-white px-8 py-3.5 text-sm font-semibold tracking-wide text-black transition-shadow hover:shadow-[0_0_40px_-4px_rgba(255,255,255,0.5)]"
+          >
+            <span className="relative z-10">See the work</span>
+            <span className="absolute inset-0 -translate-x-full bg-chrome-ice transition-transform duration-300 group-hover:translate-x-0" />
+          </motion.a>
+          <motion.a
+            href="#contact"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: "spring", stiffness: 500, damping: 24 }}
+            className="inline-flex items-center justify-center border border-white/20 px-8 py-3.5 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-300 hover:border-white/40 hover:bg-white/[0.06]"
+          >
+            Get in touch
+          </motion.a>
+          <ResumePdfLink className="inline-flex items-center justify-center px-4 py-3.5 text-sm font-medium tracking-wide text-chrome-mist transition-colors hover:text-white">
+            Resume ↓
+          </ResumePdfLink>
         </motion.div>
       </div>
 
+      {/* Scroll indicator */}
       <motion.div
-        initial={{ y: 8 }}
-        animate={{ y: 0 }}
-        transition={{ delay: 0.58, duration: 0.7, ease }}
-        className="mx-auto mt-16 flex max-w-5xl justify-center sm:mt-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.8 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 sm:bottom-12"
       >
         <motion.a
           href="#about"
           aria-label="Scroll to about"
-          animate={{ y: [0, 6, 0] }}
-          transition={{
-            duration: 2.2,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="flex flex-col items-center gap-2 text-chrome-mist"
+          className="flex flex-col items-center gap-3 text-chrome-mist/60 transition-colors hover:text-chrome-mist"
         >
-          <span className="font-mono text-[10px] uppercase tracking-[0.24em]">
-            Explore
+          <span className="font-mono text-[10px] uppercase tracking-[0.3em]">
+            Scroll
           </span>
-          <svg
-            width="22"
-            height="22"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            aria-hidden
-          >
-            <path d="M12 5v14M5 12l7 7 7-7" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
+          <motion.span
+            animate={{ y: [0, 6, 0] }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="block h-8 w-px bg-gradient-to-b from-white/40 to-transparent"
+          />
         </motion.a>
       </motion.div>
     </section>

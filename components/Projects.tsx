@@ -23,7 +23,7 @@ export function Projects() {
       <div className="mx-auto max-w-5xl">
         <MotionSection>
           <SectionLabel>Projects</SectionLabel>
-          <h2 className="mt-4 text-2xl font-semibold tracking-wide text-white sm:text-3xl md:text-[2rem]">
+          <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
             Case studies: problem, stack, outcome
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-chrome-steel">

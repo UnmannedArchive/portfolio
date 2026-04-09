@@ -2,12 +2,11 @@
 
 import { motion, type HTMLMotionProps } from "framer-motion";
 
-/** No opacity in `initial` — SSR must not paint invisible content if JS fails. */
 const fadeUp = {
-  initial: { y: 22 },
-  whileInView: { y: 0 },
-  viewport: { once: true, margin: "-40px", amount: 0.08 },
-  transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as const },
+  initial: { opacity: 0, y: 28 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-60px", amount: 0.1 },
+  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
 };
 
 type MotionSectionProps = HTMLMotionProps<"div"> & {

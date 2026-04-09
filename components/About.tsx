@@ -16,7 +16,7 @@ export function About() {
           <div>
             <MotionSection>
               <SectionLabel>About</SectionLabel>
-              <h2 className="mt-4 text-2xl font-semibold tracking-wide text-white sm:text-3xl md:text-[2rem]">
+              <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl md:text-[2.5rem]">
                 When the math has to hold and the story has to land.
               </h2>
             </MotionSection>

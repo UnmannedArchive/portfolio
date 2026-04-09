@@ -8,7 +8,7 @@ import { ResumePdfLink } from "@/components/ResumePdfLink";
 const links = [
   { href: "#about", label: "About" },
   { href: "#education", label: "Education" },
-  { href: "#organizations", label: "Organizations" },
+  { href: "#organizations", label: "Orgs" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#leadership", label: "Leadership" },
@@ -16,47 +16,51 @@ const links = [
   { href: "#contact", label: "Contact" },
 ];
 
+function NavLink({ href, children }: { href: string; children: string }) {
+  return (
+    <a href={href} className="nav-link relative px-0.5 py-1 text-[13px] font-medium text-chrome-steel transition-colors hover:text-white">
+      {children}
+      <span className="absolute -bottom-px left-0 h-px w-full origin-left scale-x-0 bg-white transition-transform duration-300 ease-out group-hover:scale-x-100" />
+    </a>
+  );
+}
+
 export function Navigation() {
   const [open, setOpen] = useState(false);
 
   return (
     <motion.header
-      initial={{ y: -10 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] as const }}
-      className="fixed left-0 right-0 top-0 z-50 border-b border-white/[0.08] bg-chrome-void/85 backdrop-blur-xl shadow-[0_1px_0_0_rgba(255,255,255,0.04)_inset]"
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+      className="fixed left-0 right-0 top-0 z-50 border-b border-white/[0.06] bg-chrome-void/80 backdrop-blur-2xl"
     >
-      <nav className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3.5 sm:px-6">
         <a
           href="#top"
-          className="font-mono text-sm font-semibold tracking-[0.35em] text-chrome-ice transition hover:text-white"
+          className="font-display text-lg tracking-wide text-white transition-opacity hover:opacity-70"
         >
           JS
         </a>
 
-        <ul className="hidden flex-wrap items-center justify-end gap-1 md:flex md:gap-5">
+        <ul className="hidden items-center gap-6 md:flex">
           {links.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                className="px-1 py-1 text-[13px] font-medium tracking-wide text-chrome-steel transition hover:text-chrome-ice"
-              >
-                {l.label}
-              </a>
+            <li key={l.href} className="group">
+              <NavLink href={l.href}>{l.label}</NavLink>
             </li>
           ))}
-          <li>
+          <li className="group">
             <a
               href={contact.githubHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-1 py-1 text-[13px] font-medium tracking-wide text-chrome-steel transition hover:text-chrome-ice"
+              className="px-0.5 py-1 text-[13px] font-medium text-chrome-steel transition-colors hover:text-white"
             >
               GitHub
             </a>
           </li>
           <li>
-            <ResumePdfLink className="px-1 py-1 text-[13px] font-medium tracking-wide text-chrome-steel transition hover:text-chrome-ice">
+            <ResumePdfLink className="ml-2 inline-flex items-center rounded-full border border-white/15 px-4 py-1.5 text-xs font-medium tracking-wide text-chrome-steel transition-all hover:border-white/30 hover:text-white">
               Resume
             </ResumePdfLink>
           </li>
@@ -64,14 +68,23 @@ export function Navigation() {
 
         <button
           type="button"
-          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded border border-white/15 md:hidden"
+          className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 md:hidden"
           aria-expanded={open}
           aria-label="Open menu"
           onClick={() => setOpen((v) => !v)}
         >
-          <span className="block h-0.5 w-5 bg-chrome-silver" />
-          <span className="block h-0.5 w-5 bg-chrome-silver" />
-          <span className="block h-0.5 w-5 bg-chrome-silver" />
+          <motion.span
+            animate={open ? { rotate: 45, y: 4 } : { rotate: 0, y: 0 }}
+            className="block h-px w-5 bg-chrome-silver"
+          />
+          <motion.span
+            animate={open ? { opacity: 0 } : { opacity: 1 }}
+            className="block h-px w-5 bg-chrome-silver"
+          />
+          <motion.span
+            animate={open ? { rotate: -45, y: -4 } : { rotate: 0, y: 0 }}
+            className="block h-px w-5 bg-chrome-silver"
+          />
         </button>
       </nav>
 
@@ -81,39 +94,53 @@ export function Navigation() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden border-t border-white/[0.08] bg-chrome-void/95 md:hidden"
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="overflow-hidden border-t border-white/[0.06] bg-chrome-void/95 backdrop-blur-2xl md:hidden"
           >
-            <ul className="flex flex-col gap-1 px-4 py-3">
-              {links.map((l) => (
-                <li key={l.href}>
+            <ul className="flex flex-col gap-0.5 px-4 py-4">
+              {links.map((l, i) => (
+                <motion.li
+                  key={l.href}
+                  initial={{ opacity: 0, x: -8 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.04 * i, duration: 0.3 }}
+                >
                   <a
                     href={l.href}
-                    className="block py-2 text-sm font-medium text-chrome-steel"
+                    className="block py-2.5 text-sm font-medium text-chrome-steel transition-colors hover:text-white"
                     onClick={() => setOpen(false)}
                   >
                     {l.label}
                   </a>
-                </li>
+                </motion.li>
               ))}
-              <li>
+              <motion.li
+                initial={{ opacity: 0, x: -8 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.04 * links.length, duration: 0.3 }}
+              >
                 <a
                   href={contact.githubHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block py-2 text-sm font-medium text-chrome-steel"
+                  className="block py-2.5 text-sm font-medium text-chrome-steel"
                   onClick={() => setOpen(false)}
                 >
                   GitHub
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -8 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.04 * (links.length + 1), duration: 0.3 }}
+              >
                 <ResumePdfLink
-                  className="block py-2 text-sm font-medium text-chrome-steel"
+                  className="block py-2.5 text-sm font-medium text-chrome-steel"
                   onNavigate={() => setOpen(false)}
                 >
                   Resume
                 </ResumePdfLink>
-              </li>
+              </motion.li>
             </ul>
           </motion.div>
         ) : null}
