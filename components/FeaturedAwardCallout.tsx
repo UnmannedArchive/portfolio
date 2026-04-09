@@ -40,7 +40,7 @@ export function FeaturedAwardCallout({
       <div className="relative flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div className="min-w-0 flex-1">
           <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.24em] text-chrome-mist">
-            Featured honor
+            Featured Honor
           </p>
           <h4 className="mt-2 text-xl font-semibold leading-snug tracking-[0.02em] text-white sm:text-2xl md:text-[1.65rem]">
             <span className="award-title-shimmer bg-gradient-to-r from-chrome-ice via-white to-emerald-200/90 bg-clip-text text-transparent">

@@ -79,21 +79,21 @@ export default function ProjectPage({ params }: Props) {
 
         <section className="mt-10 space-y-4">
           <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-chrome-mist">
-            The problem
+            The Problem
           </h2>
           <p className="leading-relaxed">{p.problem}</p>
         </section>
 
         <section className="mt-8 space-y-4">
           <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-chrome-mist">
-            What I owned
+            What I Owned
           </h2>
           <p className="leading-relaxed">{p.role}</p>
         </section>
 
         <section className="mt-8 space-y-4">
           <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-chrome-mist">
-            Tools and stack
+            Tools And Stack
           </h2>
           <ul className="flex flex-wrap gap-2">
             {p.stack.map((s) => (
@@ -109,14 +109,14 @@ export default function ProjectPage({ params }: Props) {
 
         <section className="mt-8 space-y-4">
           <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-chrome-mist">
-            How it fits together
+            How It Fits Together
           </h2>
           <p className="leading-relaxed">{p.architecture}</p>
         </section>
 
         <section className="mt-8 space-y-4">
           <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-chrome-mist">
-            What changed
+            What Changed
           </h2>
           <ul className="list-disc space-y-2 pl-5 marker:text-chrome-mist">
             {p.outcomes.map((o) => (
@@ -127,7 +127,7 @@ export default function ProjectPage({ params }: Props) {
 
         <section className="mt-10 rounded-lg border border-dashed border-white/15 bg-white/[0.02] p-6">
           <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-chrome-mist">
-            More visuals
+            More Visuals
           </h2>
           <p className="mt-2 text-sm text-chrome-mist">
             Add screenshots, diagrams, or demo links here. Hero art is set in{" "}

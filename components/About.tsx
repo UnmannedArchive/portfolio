@@ -17,7 +17,7 @@ export function About() {
             <MotionSection>
               <SectionLabel>About</SectionLabel>
               <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl md:text-[2.5rem]">
-                When the math has to hold and the story has to land.
+                When The Math Has To Hold And The Story Has To Land.
               </h2>
             </MotionSection>
 

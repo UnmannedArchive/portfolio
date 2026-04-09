@@ -21,7 +21,7 @@ export function Education() {
         <MotionSection>
           <SectionLabel>Education</SectionLabel>
           <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
-            Degrees, GPA, honors, coursework
+            Degrees, GPA, Honors, Coursework
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-chrome-steel">
             USC Marshall — dual-degree path, GPA, awards, and selected
@@ -82,7 +82,7 @@ export function Education() {
           <MotionSection delay={0.1}>
             <div>
               <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.28em] text-chrome-mist">
-                Awards and honors
+                Awards And Honors
               </p>
               <ul className="mt-6 space-y-5">
                 {awards.map((a) => (
@@ -147,7 +147,7 @@ export function Education() {
 
         <MotionSection delay={0.12} className="mt-10">
           <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.28em] text-chrome-mist">
-            Coursework that backs the work
+            Coursework That Backs The Work
           </p>
           <ul className="mt-4 flex flex-wrap gap-2">
             {relevantCoursework.map((c) => (

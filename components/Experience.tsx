@@ -106,7 +106,7 @@ export function Experience() {
           <MotionSection>
             <SectionLabel>Experience</SectionLabel>
             <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
-              Industry and research roles
+              Industry And Research Roles
             </h2>
             <p className="mt-3 max-w-2xl text-sm text-chrome-steel">
               Each role opens with a plain-English summary, then the résumé
@@ -125,7 +125,7 @@ export function Experience() {
           <MotionSection>
             <SectionLabel>Leadership</SectionLabel>
             <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
-              Campus leadership with deliverables
+              Campus Leadership With Deliverables
             </h2>
             <p className="mt-3 max-w-2xl text-sm text-chrome-steel">
               Organizations where I own the analysis, the narrative, and

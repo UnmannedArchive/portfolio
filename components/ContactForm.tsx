@@ -22,7 +22,7 @@ export function ContactForm() {
       className="mt-8 space-y-4 rounded-lg border border-white/[0.1] bg-white/[0.02] p-6"
     >
       <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
-        Write me
+        Write Me
       </p>
       <p className="text-xs text-chrome-mist">
         Opens your email app with this note pre-filled — no backend required.
@@ -69,7 +69,7 @@ export function ContactForm() {
         type="submit"
         className="w-full rounded bg-white py-2.5 text-sm font-semibold text-black transition hover:bg-chrome-ice sm:w-auto sm:px-8"
       >
-        Compose email
+        Compose Email
       </button>
     </form>
   );

@@ -19,7 +19,7 @@ export function SiteFooter() {
       <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-chrome-mist">
-            On this page
+            On This Page
           </p>
           <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
             {quick.map((q) => (

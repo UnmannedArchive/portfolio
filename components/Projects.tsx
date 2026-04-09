@@ -24,7 +24,7 @@ export function Projects() {
         <MotionSection>
           <SectionLabel>Projects</SectionLabel>
           <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
-            Case studies: problem, stack, outcome
+            Case Studies: Problem, Stack, Outcome
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-chrome-steel">
             Each card opens a short case write-up — problem, stack, and outcomes.

@@ -18,7 +18,7 @@ export function Contact() {
         <MotionSection>
           <SectionLabel>Contact</SectionLabel>
           <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
-            Say hello
+            Say Hello
           </h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-chrome-steel">
             Internships, collaborations, or introductions related to Lattice,
@@ -29,7 +29,7 @@ export function Contact() {
 
         <MotionSection delay={0.05} className="mt-8 rounded-lg border border-white/[0.08] bg-white/[0.02] p-6">
           <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
-            What I&apos;m optimizing for
+            What I&apos;m Optimizing For
           </p>
           <p className="mt-3 text-sm leading-relaxed text-chrome-steel">
             I&apos;m actively interested in{" "}

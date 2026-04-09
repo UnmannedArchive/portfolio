@@ -26,7 +26,7 @@ export function Organizations() {
         <MotionSection>
           <SectionLabel>Organizations</SectionLabel>
           <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
-            Campus &amp; national communities
+            Campus &amp; National Communities
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-chrome-steel">
             Groups where I&apos;ve built products, consulted for impact, and

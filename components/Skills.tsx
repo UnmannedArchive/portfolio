@@ -106,7 +106,7 @@ export function Skills() {
         <MotionSection>
           <SectionLabel>Skills</SectionLabel>
           <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
-            Stack, depth, and curiosity
+            Stack, Depth, And Curiosity
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-chrome-steel">
             Grouped by how I actually use them — not every tool is equally
@@ -116,7 +116,7 @@ export function Skills() {
 
         <MotionSection delay={0.06} className="mt-10 space-y-6 rounded-lg border border-white/[0.08] bg-white/[0.02] p-6">
           <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
-            Depth — self-assessed
+            Depth — Self-Assessed
           </p>
           <div className="space-y-4">
             {skillProficiency.map((s) => (
@@ -144,7 +144,7 @@ export function Skills() {
 
         <MotionSection delay={0.08} className="mt-10">
           <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
-            Where I show up
+            Where I Show Up
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
             {organizations.map((t) => (
@@ -155,7 +155,7 @@ export function Skills() {
 
         <MotionSection delay={0.1} className="mt-10">
           <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
-            Human languages
+            Human Languages
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
             {humanLanguages.map((t) => (
@@ -166,7 +166,7 @@ export function Skills() {
 
         <MotionSection delay={0.12} className="mt-10">
           <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
-            Off the clock
+            Off The Clock
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
             {interests.map((item) =>
