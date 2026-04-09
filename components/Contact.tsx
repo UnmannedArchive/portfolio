@@ -12,9 +12,9 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className={`relative z-10 border-t border-white/[0.06] ${sectionPad} ${scrollAnchor}`}
+      className={`section-streak relative z-10 ${sectionPad} ${scrollAnchor}`}
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         <MotionSection>
           <SectionLabel>Contact</SectionLabel>
           <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
@@ -27,8 +27,8 @@ export function Contact() {
           </p>
         </MotionSection>
 
-        <MotionSection delay={0.05} className="mt-8 rounded-lg border border-white/[0.08] bg-white/[0.02] p-6">
-          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
+        <MotionSection delay={0.05} className="glass-card mt-8 rounded-lg p-6">
+          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/70">
             What I&apos;m Optimizing For
           </p>
           <p className="mt-3 text-sm leading-relaxed text-chrome-steel">
@@ -61,9 +61,9 @@ export function Contact() {
               whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 0.99 }}
               transition={{ type: "spring", stiffness: 400, damping: 28 }}
-              className="flex flex-1 flex-col justify-center rounded-lg border border-white/[0.1] bg-white/[0.02] px-6 py-5 transition hover:border-white/20 hover:bg-white/[0.04] sm:min-w-[240px] sm:max-w-sm"
+              className="glass-card flex flex-1 flex-col justify-center rounded-lg px-6 py-5 sm:min-w-[240px] sm:max-w-sm"
             >
-              <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
+              <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/70">
                 {resume.label}
               </span>
               <span className="mt-2 text-base font-medium text-chrome-silver">
@@ -89,10 +89,10 @@ export function Contact() {
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.99 }}
             transition={{ type: "spring", stiffness: 400, damping: 28 }}
-            className="group relative flex flex-col justify-center overflow-hidden rounded-lg p-[1px] bg-gradient-to-br from-white/30 via-white/10 to-transparent lg:col-span-2"
+            className="group relative flex flex-col justify-center overflow-hidden rounded-lg p-[1px] bg-gradient-to-br from-accent/30 via-white/10 to-transparent lg:col-span-2"
           >
-            <div className="chrome-panel flex flex-1 flex-col justify-center px-6 py-5">
-              <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
+            <div className="flex flex-1 flex-col justify-center rounded-lg bg-chrome-void/90 px-6 py-5 backdrop-blur-md">
+              <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/70">
                 Email
               </span>
               <span className="mt-2 text-sm font-medium text-white sm:text-base">
@@ -105,9 +105,9 @@ export function Contact() {
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.99 }}
             transition={{ type: "spring", stiffness: 400, damping: 28 }}
-            className="flex flex-col justify-center rounded-lg border border-white/[0.1] bg-white/[0.02] px-6 py-5 transition hover:border-white/20 hover:bg-white/[0.04]"
+            className="glass-card flex flex-col justify-center rounded-lg px-6 py-5"
           >
-            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-steel">
+            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/60">
               Phone
             </span>
             <span className="mt-2 text-sm font-medium text-chrome-silver sm:text-base">
@@ -121,9 +121,9 @@ export function Contact() {
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.99 }}
             transition={{ type: "spring", stiffness: 400, damping: 28 }}
-            className="flex flex-col justify-center rounded-lg border border-white/[0.1] bg-white/[0.02] px-6 py-5 transition hover:border-white/20 hover:bg-white/[0.04]"
+            className="glass-card flex flex-col justify-center rounded-lg px-6 py-5"
           >
-            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-steel">
+            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/60">
               LinkedIn
             </span>
             <span className="mt-2 text-sm font-medium text-chrome-silver sm:text-base">
@@ -137,9 +137,9 @@ export function Contact() {
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.99 }}
             transition={{ type: "spring", stiffness: 400, damping: 28 }}
-            className="flex flex-col justify-center rounded-lg border border-white/[0.1] bg-white/[0.02] px-6 py-5 transition hover:border-white/20 hover:bg-white/[0.04] sm:col-span-2 lg:col-span-4"
+            className="glass-card flex flex-col justify-center rounded-lg px-6 py-5 sm:col-span-2 lg:col-span-4"
           >
-            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-steel">
+            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/60">
               GitHub
             </span>
             <span className="mt-2 text-sm font-medium text-chrome-silver sm:text-base">

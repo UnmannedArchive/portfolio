@@ -37,12 +37,12 @@ export default function ProjectPage({ params }: Props) {
       <article className="mx-auto max-w-3xl">
         <Link
           href="/#projects"
-          className="font-mono text-xs uppercase tracking-wider text-chrome-mist transition hover:text-white"
+          className="font-mono text-xs uppercase tracking-wider text-accent/70 transition hover:text-white"
         >
           ← Back to projects
         </Link>
 
-        <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-xl border border-white/10 bg-chrome-deep">
+        <div className="glass-card relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-xl">
           {mbrlHero ? (
             <div className="absolute inset-0 flex items-center justify-center p-8 sm:p-12">
               <div
@@ -78,28 +78,28 @@ export default function ProjectPage({ params }: Props) {
         <p className="mt-2 text-lg text-chrome-silver">{p.tagline}</p>
 
         <section className="mt-10 space-y-4">
-          <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-chrome-mist">
+          <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-accent/70">
             The Problem
           </h2>
           <p className="leading-relaxed">{p.problem}</p>
         </section>
 
         <section className="mt-8 space-y-4">
-          <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-chrome-mist">
+          <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-accent/70">
             What I Owned
           </h2>
           <p className="leading-relaxed">{p.role}</p>
         </section>
 
         <section className="mt-8 space-y-4">
-          <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-chrome-mist">
+          <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-accent/70">
             Tools And Stack
           </h2>
           <ul className="flex flex-wrap gap-2">
             {p.stack.map((s) => (
               <li
                 key={s}
-                className="rounded border border-white/10 bg-white/[0.04] px-2.5 py-1 text-sm text-chrome-silver"
+                className="rounded border border-accent/10 bg-accent/[0.04] px-2.5 py-1 text-sm text-chrome-silver"
               >
                 {s}
               </li>
@@ -108,25 +108,25 @@ export default function ProjectPage({ params }: Props) {
         </section>
 
         <section className="mt-8 space-y-4">
-          <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-chrome-mist">
+          <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-accent/70">
             How It Fits Together
           </h2>
           <p className="leading-relaxed">{p.architecture}</p>
         </section>
 
         <section className="mt-8 space-y-4">
-          <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-chrome-mist">
+          <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-accent/70">
             What Changed
           </h2>
-          <ul className="list-disc space-y-2 pl-5 marker:text-chrome-mist">
+          <ul className="list-disc space-y-2 pl-5 marker:text-accent/40">
             {p.outcomes.map((o) => (
               <li key={o}>{o}</li>
             ))}
           </ul>
         </section>
 
-        <section className="mt-10 rounded-lg border border-dashed border-white/15 bg-white/[0.02] p-6">
-          <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-chrome-mist">
+        <section className="glass-card mt-10 rounded-lg p-6">
+          <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-accent/70">
             More Visuals
           </h2>
           <p className="mt-2 text-sm text-chrome-mist">
@@ -134,7 +134,8 @@ export default function ProjectPage({ params }: Props) {
             <code className="rounded bg-white/5 px-1 text-xs">
               lib/project-details.ts
             </code>{" "}
-            (paths under <code className="rounded bg-white/5 px-1 text-xs">public/</code>
+            (paths under{" "}
+            <code className="rounded bg-white/5 px-1 text-xs">public/</code>
             ).
           </p>
         </section>
@@ -142,7 +143,7 @@ export default function ProjectPage({ params }: Props) {
         <p className="mt-12 text-center">
           <Link
             href="/#contact"
-            className="text-sm font-semibold text-chrome-ice hover:text-white"
+            className="text-sm font-semibold text-accent hover:text-white"
           >
             Discuss this project →
           </Link>

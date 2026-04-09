@@ -29,7 +29,7 @@ const groupLabels: Record<string, string> = {
 
 function Pill({ children }: { children: ReactNode }) {
   return (
-    <span className="rounded border border-white/[0.1] bg-white/[0.04] px-2.5 py-1.5 text-xs text-chrome-steel">
+    <span className="rounded border border-white/[0.08] bg-white/[0.02] px-2.5 py-1.5 text-xs text-chrome-steel transition-colors hover:border-accent/20 hover:text-white">
       {children}
     </span>
   );
@@ -40,10 +40,12 @@ function OrgChip({ name }: { name: string }) {
   if (!src) return <Pill>{name}</Pill>;
   const mbrl = isMbrlLogo(src);
   return (
-    <span className="inline-flex items-center gap-2 rounded border border-white/[0.1] bg-white/[0.04] px-2.5 py-1.5">
+    <span className="inline-flex items-center gap-2 rounded border border-white/[0.08] bg-white/[0.02] px-2.5 py-1.5 transition-colors hover:border-accent/20">
       <span
         className={`flex h-[22px] w-[22px] shrink-0 items-center justify-center overflow-hidden ${
-          mbrl ? `${mbrlLogoTileClass()} p-0.5` : "rounded ring-1 ring-white/10 bg-black/35"
+          mbrl
+            ? `${mbrlLogoTileClass()} p-0.5`
+            : "rounded ring-1 ring-white/10 bg-black/35"
         }`}
       >
         <Image
@@ -82,9 +84,9 @@ function BarRow({
     <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-4">
       <span className="w-48 shrink-0 text-sm text-chrome-silver">{name}</span>
       <div className="flex flex-1 items-center gap-3">
-        <div className="h-1.5 flex-1 max-w-[200px] rounded-full bg-white/10">
+        <div className="h-1.5 flex-1 max-w-[200px] rounded-full bg-white/5">
           <div
-            className="h-full rounded-full bg-white/50 transition-all"
+            className="h-full rounded-full bg-gradient-to-r from-accent/60 to-accent transition-all"
             style={{ width: widthPct }}
           />
         </div>
@@ -100,9 +102,9 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className={`relative z-10 border-t border-white/[0.06] ${sectionPad} ${scrollAnchor}`}
+      className={`section-streak relative z-10 ${sectionPad} ${scrollAnchor}`}
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         <MotionSection>
           <SectionLabel>Skills</SectionLabel>
           <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
@@ -114,8 +116,11 @@ export function Skills() {
           </p>
         </MotionSection>
 
-        <MotionSection delay={0.06} className="mt-10 space-y-6 rounded-lg border border-white/[0.08] bg-white/[0.02] p-6">
-          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
+        <MotionSection
+          delay={0.06}
+          className="glass-card mt-10 space-y-6 rounded-lg p-6"
+        >
+          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/70">
             Depth — Self-Assessed
           </p>
           <div className="space-y-4">
@@ -129,7 +134,7 @@ export function Skills() {
           {(Object.keys(skillGroups) as (keyof typeof skillGroups)[]).map(
             (key, i) => (
               <MotionSection key={key} delay={0.04 * i}>
-                <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
+                <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/70">
                   {groupLabels[key]}
                 </p>
                 <div className="mt-3 flex flex-wrap gap-2">
@@ -143,7 +148,7 @@ export function Skills() {
         </div>
 
         <MotionSection delay={0.08} className="mt-10">
-          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
+          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/70">
             Where I Show Up
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
@@ -154,7 +159,7 @@ export function Skills() {
         </MotionSection>
 
         <MotionSection delay={0.1} className="mt-10">
-          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
+          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/70">
             Human Languages
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
@@ -165,7 +170,7 @@ export function Skills() {
         </MotionSection>
 
         <MotionSection delay={0.12} className="mt-10">
-          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
+          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/70">
             Off The Clock
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
@@ -176,7 +181,7 @@ export function Skills() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded border border-white/[0.12] bg-white/[0.04] px-2.5 py-1.5 text-xs text-chrome-silver underline-offset-2 transition hover:border-white/25 hover:text-white"
+                  className="rounded border border-white/[0.08] bg-white/[0.02] px-2.5 py-1.5 text-xs text-chrome-silver underline-offset-2 transition hover:border-accent/25 hover:text-white"
                 >
                   {item.label}
                   {item.hint ? ` · ${item.hint}` : ""}

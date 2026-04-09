@@ -19,9 +19,9 @@ export function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mt-8 space-y-4 rounded-lg border border-white/[0.1] bg-white/[0.02] p-6"
+      className="glass-card mt-8 space-y-4 rounded-lg p-6"
     >
-      <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
+      <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/70">
         Write Me
       </p>
       <p className="text-xs text-chrome-mist">
@@ -36,7 +36,7 @@ export function ContactForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Name"
-          className="w-full rounded border border-white/15 bg-chrome-void/80 px-4 py-2.5 text-sm text-chrome-steel placeholder:text-chrome-mist focus:border-white/30 focus:outline-none"
+          className="w-full rounded border border-white/10 bg-chrome-void/80 px-4 py-2.5 text-sm text-chrome-steel placeholder:text-chrome-mist/50 focus:border-accent/40 focus:outline-none focus:ring-1 focus:ring-accent/20"
         />
       </div>
       <div>
@@ -49,7 +49,7 @@ export function ContactForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Your email"
-          className="w-full rounded border border-white/15 bg-chrome-void/80 px-4 py-2.5 text-sm text-chrome-steel placeholder:text-chrome-mist focus:border-white/30 focus:outline-none"
+          className="w-full rounded border border-white/10 bg-chrome-void/80 px-4 py-2.5 text-sm text-chrome-steel placeholder:text-chrome-mist/50 focus:border-accent/40 focus:outline-none focus:ring-1 focus:ring-accent/20"
         />
       </div>
       <div>
@@ -62,12 +62,12 @@ export function ContactForm() {
           onChange={(e) => setMessage(e.target.value)}
           placeholder="What would you like to talk about?"
           rows={4}
-          className="w-full resize-y rounded border border-white/15 bg-chrome-void/80 px-4 py-2.5 text-sm text-chrome-steel placeholder:text-chrome-mist focus:border-white/30 focus:outline-none"
+          className="w-full resize-y rounded border border-white/10 bg-chrome-void/80 px-4 py-2.5 text-sm text-chrome-steel placeholder:text-chrome-mist/50 focus:border-accent/40 focus:outline-none focus:ring-1 focus:ring-accent/20"
         />
       </div>
       <button
         type="submit"
-        className="w-full rounded bg-white py-2.5 text-sm font-semibold text-black transition hover:bg-chrome-ice sm:w-auto sm:px-8"
+        className="w-full rounded-sm bg-accent py-2.5 text-sm font-semibold text-white transition hover:bg-accent/90 hover:shadow-[0_0_30px_-6px_rgba(59,130,246,0.5)] sm:w-auto sm:px-8"
       >
         Compose Email
       </button>

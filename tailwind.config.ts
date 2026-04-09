@@ -12,6 +12,11 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        accent: {
+          DEFAULT: "#3b82f6",
+          glow: "rgba(59, 130, 246, 0.35)",
+          dim: "rgba(59, 130, 246, 0.12)",
+        },
         chrome: {
           void: "#000000",
           deep: "#050508",
@@ -37,10 +42,34 @@ const config: Config = {
           from: { transform: "scaleX(0)" },
           to: { transform: "scaleX(1)" },
         },
+        "gradient-shift": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { opacity: "0.4" },
+          "50%": { opacity: "1" },
+        },
+        "slide-in-right": {
+          from: { opacity: "0", transform: "translateX(-20px)" },
+          to: { opacity: "1", transform: "translateX(0)" },
+        },
+        "counter-up": {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
-        "fade-in-up": "fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards",
-        "line-grow": "line-grow 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+        "fade-in-up":
+          "fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+        "line-grow":
+          "line-grow 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+        "gradient-shift": "gradient-shift 6s ease-in-out infinite",
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        "slide-in-right":
+          "slide-in-right 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+        "counter-up":
+          "counter-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards",
       },
     },
   },

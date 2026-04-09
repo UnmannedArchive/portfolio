@@ -9,9 +9,9 @@ export function About() {
   return (
     <section
       id="about"
-      className={`relative z-10 border-t border-white/[0.06] ${sectionPad} ${scrollAnchor}`}
+      className={`section-streak relative z-10 ${sectionPad} ${scrollAnchor}`}
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_220px] lg:items-start">
           <div>
             <MotionSection>
@@ -37,8 +37,7 @@ export function About() {
                 move faster on patents and compounds. Outside of that
                 you&apos;ll find me on the Mariner desk, in the Marshall
                 Behavioral Lab poking at LLMs, or at BlackGen stress-testing
-                signals until they
-                deserve a committee&apos;s time.
+                signals until they deserve a committee&apos;s time.
               </p>
             </MotionSection>
           </div>
@@ -47,7 +46,7 @@ export function About() {
             delay={0.06}
             className="mx-auto w-full max-w-[220px] lg:mx-0 lg:max-w-none"
           >
-            <div className="flex aspect-square w-full max-w-[220px] items-center justify-center overflow-hidden rounded-xl border border-white/12 bg-chrome-deep lg:max-w-none">
+            <div className="glass-card flex aspect-square w-full max-w-[220px] items-center justify-center overflow-hidden rounded-xl lg:max-w-none">
               <Image
                 src="/images/headshot.svg"
                 alt=""
@@ -58,7 +57,9 @@ export function About() {
             </div>
             <p className="mt-2 text-center text-xs text-chrome-mist lg:text-left">
               Swap in your photo — replace{" "}
-              <code className="rounded bg-white/5 px-1">public/images/headshot.svg</code>
+              <code className="rounded bg-white/5 px-1">
+                public/images/headshot.svg
+              </code>
             </p>
           </MotionSection>
         </div>

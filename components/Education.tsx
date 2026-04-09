@@ -15,9 +15,9 @@ export function Education() {
   return (
     <section
       id="education"
-      className={`relative z-10 border-t border-white/[0.06] ${sectionPad} ${scrollAnchor}`}
+      className={`section-streak relative z-10 ${sectionPad} ${scrollAnchor}`}
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         <MotionSection>
           <SectionLabel>Education</SectionLabel>
           <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
@@ -34,10 +34,10 @@ export function Education() {
             {educationPrograms.map((prog) => (
               <div
                 key={prog.school + prog.degree}
-                className="rounded-lg border border-white/[0.1] bg-white/[0.03] p-6 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] backdrop-blur-sm"
+                className="glass-card rounded-lg p-6"
               >
                 {prog.college ? (
-                  <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
+                  <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/70">
                     {prog.college}
                   </p>
                 ) : null}
@@ -49,7 +49,9 @@ export function Education() {
                   {prog.degree}
                 </p>
                 {prog.detail ? (
-                  <p className="mt-2 text-sm text-chrome-steel">{prog.detail}</p>
+                  <p className="mt-2 text-sm text-chrome-steel">
+                    {prog.detail}
+                  </p>
                 ) : null}
                 {prog.end ? (
                   <p className="mt-2 font-mono text-xs uppercase tracking-wider text-chrome-steel">
@@ -58,8 +60,8 @@ export function Education() {
                 ) : null}
 
                 {prog.gpa ? (
-                  <div className="mt-8 border-t border-white/[0.08] pt-8">
-                    <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-chrome-mist">
+                  <div className="mt-8 border-t border-white/[0.06] pt-8">
+                    <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/70">
                       Grade Point Average
                     </p>
                     <p className="mt-3 flex items-baseline gap-2">
@@ -81,15 +83,12 @@ export function Education() {
 
           <MotionSection delay={0.1}>
             <div>
-              <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.28em] text-chrome-mist">
+              <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.28em] text-accent/70">
                 Awards And Honors
               </p>
               <ul className="mt-6 space-y-5">
                 {awards.map((a) => (
-                  <li
-                    key={a.title}
-                    className="rounded-lg border border-white/[0.08] bg-white/[0.02] p-5 transition hover:border-white/[0.12] hover:bg-white/[0.03]"
-                  >
+                  <li key={a.title} className="glass-card rounded-lg p-5">
                     {a.prizeLabel && a.logo ? (
                       <>
                         <FeaturedAwardCallout
@@ -146,14 +145,14 @@ export function Education() {
         </div>
 
         <MotionSection delay={0.12} className="mt-10">
-          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.28em] text-chrome-mist">
+          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.28em] text-accent/70">
             Coursework That Backs The Work
           </p>
           <ul className="mt-4 flex flex-wrap gap-2">
             {relevantCoursework.map((c) => (
               <li
                 key={c}
-                className="rounded border border-white/[0.1] bg-white/[0.03] px-3 py-1.5 text-sm text-chrome-steel"
+                className="rounded border border-white/[0.08] bg-white/[0.02] px-3 py-1.5 text-sm text-chrome-steel transition-colors hover:border-accent/20 hover:text-white"
               >
                 {c}
               </li>

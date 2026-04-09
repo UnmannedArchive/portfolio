@@ -21,7 +21,7 @@ function Timeline({ items }: { items: ExperienceItem[] }) {
   return (
     <div className="relative mt-10">
       <div
-        className="absolute bottom-2 left-[9px] top-2 w-px bg-gradient-to-b from-white/35 via-white/12 to-transparent sm:left-[13px]"
+        className="absolute bottom-2 left-[9px] top-2 w-px bg-gradient-to-b from-accent/40 via-white/10 to-transparent sm:left-[13px]"
         aria-hidden
       />
       <ol className="space-y-12">
@@ -34,11 +34,12 @@ function Timeline({ items }: { items: ExperienceItem[] }) {
             >
               <li className="relative pl-12 sm:pl-16">
                 <motion.span
-                  className="absolute left-0 top-2 flex h-5 w-5 cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 bg-chrome-deep shadow-[inset_0_0_8px_rgba(255,255,255,0.15)] sm:left-1 sm:h-7 sm:w-7"
+                  className="absolute left-0 top-2 flex h-5 w-5 cursor-pointer items-center justify-center overflow-hidden rounded-full border border-accent/30 bg-chrome-deep shadow-[0_0_12px_rgba(59,130,246,0.15)] sm:left-1 sm:h-7 sm:w-7"
                   aria-hidden
                   whileHover={{
                     scale: 1.12,
-                    borderColor: "rgba(255,255,255,0.4)",
+                    borderColor: "rgba(59,130,246,0.5)",
+                    boxShadow: "0 0 20px rgba(59,130,246,0.3)",
                   }}
                   transition={{ type: "spring", stiffness: 400, damping: 22 }}
                 >
@@ -63,10 +64,10 @@ function Timeline({ items }: { items: ExperienceItem[] }) {
                       />
                     </span>
                   ) : (
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-br from-white to-chrome-mist shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
+                    <span className="h-2 w-2 rounded-full bg-accent shadow-[0_0_8px_rgba(59,130,246,0.5)]" />
                   )}
                 </motion.span>
-                <time className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-chrome-mist">
+                <time className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent/70">
                   {item.period}
                 </time>
                 <h3 className="mt-2 text-lg font-semibold tracking-wide text-white sm:text-xl">
@@ -81,7 +82,7 @@ function Timeline({ items }: { items: ExperienceItem[] }) {
                 <p className="mt-4 max-w-3xl text-sm leading-relaxed text-chrome-silver">
                   {item.summaryPlain}
                 </p>
-                <ul className="mt-4 max-w-3xl list-disc space-y-2.5 pl-5 text-sm leading-relaxed text-chrome-steel marker:text-chrome-mist">
+                <ul className="mt-4 max-w-3xl list-disc space-y-2.5 pl-5 text-sm leading-relaxed text-chrome-steel marker:text-accent/40">
                   {item.bullets.map((b, j) => (
                     <li key={`${item.org}-${item.period}-${j}`}>{b}</li>
                   ))}
@@ -100,9 +101,9 @@ export function Experience() {
     <>
       <section
         id="experience"
-        className={`relative z-10 border-t border-white/[0.06] ${sectionPad} ${scrollAnchor}`}
+        className={`section-streak relative z-10 ${sectionPad} ${scrollAnchor}`}
       >
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-6xl">
           <MotionSection>
             <SectionLabel>Experience</SectionLabel>
             <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
@@ -119,9 +120,9 @@ export function Experience() {
 
       <section
         id="leadership"
-        className={`relative z-10 border-t border-white/[0.06] bg-white/[0.02] ${sectionPad} ${scrollAnchor}`}
+        className={`section-streak relative z-10 bg-accent/[0.02] ${sectionPad} ${scrollAnchor}`}
       >
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-6xl">
           <MotionSection>
             <SectionLabel>Leadership</SectionLabel>
             <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">

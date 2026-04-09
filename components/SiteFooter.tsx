@@ -15,10 +15,10 @@ const quick = [
 
 export function SiteFooter() {
   return (
-    <footer className="mx-auto mt-16 max-w-5xl border-t border-white/[0.08] px-4 py-10 sm:px-6">
+    <footer className="section-streak mx-auto mt-0 max-w-6xl px-4 py-16 sm:px-6">
       <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-chrome-mist">
+          <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent/60">
             On This Page
           </p>
           <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
@@ -55,11 +55,18 @@ export function SiteFooter() {
           </a>
         </div>
       </div>
-      <p className="mt-8 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-chrome-mist">
-        © {new Date().getFullYear()} {contact.name} · Built with{" "}
+      <div className="mt-12 flex items-center gap-4">
+        <div className="h-px flex-1 bg-gradient-to-r from-accent/20 to-transparent" />
+        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-chrome-mist/50">
+          © {new Date().getFullYear()} {contact.name}
+        </p>
+        <div className="h-px flex-1 bg-gradient-to-l from-accent/20 to-transparent" />
+      </div>
+      <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-chrome-mist/40">
+        Built with{" "}
         <Link
           href="https://nextjs.org"
-          className="text-chrome-steel underline-offset-2 hover:underline"
+          className="text-chrome-mist/60 underline-offset-2 hover:underline hover:text-white"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -68,7 +75,7 @@ export function SiteFooter() {
         &amp;{" "}
         <Link
           href="https://tailwindcss.com"
-          className="text-chrome-steel underline-offset-2 hover:underline"
+          className="text-chrome-mist/60 underline-offset-2 hover:underline hover:text-white"
           target="_blank"
           rel="noopener noreferrer"
         >
