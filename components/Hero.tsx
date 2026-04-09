@@ -90,6 +90,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3, ease }}
           className="mt-8 max-w-xl text-[15px] leading-[1.85] text-chrome-steel sm:text-base"
         >
+          Based in{" "}
+          <strong className="font-medium text-white">Los Angeles</strong> and{" "}
+          <strong className="font-medium text-white">New York City</strong>.
           Co-founder of{" "}
           <strong className="font-medium text-white">Lattice</strong> — building
           pharma IP analytics. USC Merit Scholar. Marshall School of Business
