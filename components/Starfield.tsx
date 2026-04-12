@@ -6,18 +6,18 @@ import { useEffect, useMemo, useState } from "react";
 function starStyle(index: number) {
   const x = ((index * 47) % 1000) / 10;
   const y = ((index * 83) % 1000) / 10;
-  const size = 1 + (index % 3);
+  const size = 0.8 + (index % 3) * 0.6;
   const duration = 2.2 + (index % 7) * 0.35;
   const delay = ((index * 13) % 40) / 10;
   return { x, y, size, duration, delay };
 }
 
 export function Starfield() {
-  const [count, setCount] = useState(64);
+  const [count, setCount] = useState(80);
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 768px)");
-    const apply = () => setCount(mq.matches ? 32 : 88);
+    const apply = () => setCount(mq.matches ? 40 : 120);
     apply();
     mq.addEventListener("change", apply);
     return () => mq.removeEventListener("change", apply);
@@ -43,12 +43,12 @@ export function Starfield() {
             width: s.size,
             height: s.size,
             boxShadow:
-              s.size > 1
-                ? "0 0 4px 1px rgba(255,255,255,0.35)"
-                : "0 0 2px rgba(255,255,255,0.5)",
+              s.size > 1.2
+                ? "0 0 6px 1px rgba(255,255,255,0.25)"
+                : "0 0 3px rgba(255,255,255,0.4)",
           }}
-          initial={{ opacity: 0.15 }}
-          animate={{ opacity: [0.15, 0.95, 0.2, 0.85, 0.15] }}
+          initial={{ opacity: 0.1 }}
+          animate={{ opacity: [0.1, 0.7, 0.15, 0.6, 0.1] }}
           transition={{
             duration: s.duration,
             repeat: Infinity,

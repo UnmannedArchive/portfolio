@@ -25,10 +25,10 @@ export function Organizations() {
       <div className="mx-auto max-w-6xl">
         <MotionSection>
           <SectionLabel>Organizations</SectionLabel>
-          <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
+          <h2 className="chrome-text-static mt-5 font-display text-3xl italic leading-snug sm:text-4xl">
             Campus &amp; National Communities
           </h2>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-chrome-steel">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/50">
             Groups where I&apos;ve built products, consulted for impact, and
             leveled up on markets—each card opens the organization&apos;s site.
           </p>
@@ -87,10 +87,10 @@ export function Organizations() {
                       <h3 className="text-base font-semibold tracking-wide text-white">
                         {org.name}
                       </h3>
-                      <p className="mt-3 flex-1 text-sm leading-relaxed text-chrome-steel">
+                      <p className="mt-3 flex-1 text-sm leading-relaxed text-white/50">
                         {org.description}
                       </p>
-                      <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-accent/60 transition group-hover:text-accent">
+                      <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-white/30 transition group-hover:text-white/60">
                         Visit site →
                       </p>
                     </div>

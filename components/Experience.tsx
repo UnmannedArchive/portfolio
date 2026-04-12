@@ -21,7 +21,7 @@ function Timeline({ items }: { items: ExperienceItem[] }) {
   return (
     <div className="relative mt-10">
       <div
-        className="absolute bottom-2 left-[9px] top-2 w-px bg-gradient-to-b from-accent/40 via-white/10 to-transparent sm:left-[13px]"
+        className="absolute bottom-2 left-[9px] top-2 w-px bg-gradient-to-b from-white/20 via-white/10 to-transparent sm:left-[13px]"
         aria-hidden
       />
       <ol className="space-y-12">
@@ -34,12 +34,12 @@ function Timeline({ items }: { items: ExperienceItem[] }) {
             >
               <li className="relative pl-12 sm:pl-16">
                 <motion.span
-                  className="absolute left-0 top-2 flex h-5 w-5 cursor-pointer items-center justify-center overflow-hidden rounded-full border border-accent/30 bg-chrome-deep shadow-[0_0_12px_rgba(59,130,246,0.15)] sm:left-1 sm:h-7 sm:w-7"
+                  className="absolute left-0 top-2 flex h-5 w-5 cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 bg-chrome-deep shadow-[0_0_12px_rgba(255,255,255,0.05)] sm:left-1 sm:h-7 sm:w-7"
                   aria-hidden
                   whileHover={{
                     scale: 1.12,
-                    borderColor: "rgba(59,130,246,0.5)",
-                    boxShadow: "0 0 20px rgba(59,130,246,0.3)",
+                    borderColor: "rgba(255,255,255,0.4)",
+                    boxShadow: "0 0 20px rgba(255,255,255,0.15)",
                   }}
                   transition={{ type: "spring", stiffness: 400, damping: 22 }}
                 >
@@ -64,25 +64,25 @@ function Timeline({ items }: { items: ExperienceItem[] }) {
                       />
                     </span>
                   ) : (
-                    <span className="h-2 w-2 rounded-full bg-accent shadow-[0_0_8px_rgba(59,130,246,0.5)]" />
+                    <span className="h-2 w-2 rounded-full bg-white/50 shadow-[0_0_8px_rgba(255,255,255,0.3)]" />
                   )}
                 </motion.span>
-                <time className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent/70">
+                <time className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-white/35">
                   {item.period}
                 </time>
                 <h3 className="mt-2 text-lg font-semibold tracking-wide text-white sm:text-xl">
                   {item.role}
                 </h3>
-                <p className="mt-1 text-sm font-medium text-chrome-silver">
+                <p className="mt-1 text-sm font-medium text-white/70">
                   {item.org}
                 </p>
-                <p className="mt-0.5 text-xs text-chrome-mist">
+                <p className="mt-0.5 text-xs text-white/30">
                   {item.location}
                 </p>
-                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-chrome-silver">
+                <p className="mt-4 max-w-3xl text-sm leading-relaxed text-white/60">
                   {item.summaryPlain}
                 </p>
-                <ul className="mt-4 max-w-3xl list-disc space-y-2.5 pl-5 text-sm leading-relaxed text-chrome-steel marker:text-accent/40">
+                <ul className="mt-4 max-w-3xl list-disc space-y-2.5 pl-5 text-sm leading-relaxed text-white/45 marker:text-white/20">
                   {item.bullets.map((b, j) => (
                     <li key={`${item.org}-${item.period}-${j}`}>{b}</li>
                   ))}
@@ -106,10 +106,10 @@ export function Experience() {
         <div className="mx-auto max-w-6xl">
           <MotionSection>
             <SectionLabel>Experience</SectionLabel>
-            <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
+            <h2 className="chrome-text-static mt-5 font-display text-3xl italic leading-snug sm:text-4xl">
               Industry And Research Roles
             </h2>
-            <p className="mt-3 max-w-2xl text-sm text-chrome-steel">
+            <p className="mt-3 max-w-2xl text-sm text-white/50">
               Each role opens with a plain-English summary, then the résumé
               bullets.
             </p>
@@ -120,15 +120,15 @@ export function Experience() {
 
       <section
         id="leadership"
-        className={`section-streak relative z-10 bg-accent/[0.02] ${sectionPad} ${scrollAnchor}`}
+        className={`section-streak relative z-10 bg-white/[0.01] ${sectionPad} ${scrollAnchor}`}
       >
         <div className="mx-auto max-w-6xl">
           <MotionSection>
             <SectionLabel>Leadership</SectionLabel>
-            <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
+            <h2 className="chrome-text-static mt-5 font-display text-3xl italic leading-snug sm:text-4xl">
               Campus Leadership With Deliverables
             </h2>
-            <p className="mt-3 max-w-2xl text-sm text-chrome-steel">
+            <p className="mt-3 max-w-2xl text-sm text-white/50">
               Organizations where I own the analysis, the narrative, and
               stakeholder-ready deliverables.
             </p>

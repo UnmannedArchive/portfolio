@@ -23,14 +23,14 @@ export function Projects() {
       <div className="mx-auto max-w-6xl">
         <MotionSection>
           <SectionLabel>Projects</SectionLabel>
-          <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
+          <h2 className="chrome-text-static mt-5 font-display text-3xl italic leading-snug sm:text-4xl">
             Case Studies: Problem, Stack, Outcome
           </h2>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-chrome-steel">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/50">
             Each card opens a short case write-up — problem, stack, and
             outcomes. Some cards use partner or organization logos; swap in
             product screenshots anytime under{" "}
-            <code className="rounded bg-white/[0.06] px-1.5 py-0.5 font-mono text-xs text-chrome-silver">
+            <code className="rounded bg-white/[0.06] px-1.5 py-0.5 font-mono text-xs text-white/60">
               public/images/projects/
             </code>
             .
@@ -86,20 +86,20 @@ export function Projects() {
                       <h3 className="text-xl font-semibold tracking-wide text-white">
                         {p.title}
                       </h3>
-                      <p className="mt-3 flex-1 text-sm leading-relaxed text-chrome-steel">
+                      <p className="mt-3 flex-1 text-sm leading-relaxed text-white/50">
                         {p.description}
                       </p>
                       <div className="mt-4 flex flex-wrap gap-2">
                         {p.tags.map((t) => (
                           <span
                             key={t}
-                            className="border border-accent/10 bg-accent/[0.04] px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-chrome-mist"
+                            className="border border-white/[0.08] bg-white/[0.02] px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-white/40"
                           >
                             {t}
                           </span>
                         ))}
                       </div>
-                      <span className="mt-5 inline-flex text-sm font-semibold text-accent transition group-hover:text-white">
+                      <span className="mt-5 inline-flex text-sm font-semibold text-white/50 transition group-hover:text-white">
                         Case study →
                       </span>
                     </article>

@@ -20,7 +20,7 @@ function NavLink({ href, children }: { href: string; children: string }) {
   return (
     <a
       href={href}
-      className="nav-link relative px-0.5 py-1 text-[13px] font-medium text-chrome-steel transition-colors hover:text-white"
+      className="nav-link relative px-0.5 py-1 text-[13px] font-medium text-white/50 transition-colors hover:text-white"
     >
       {children}
     </a>
@@ -35,7 +35,7 @@ export function Navigation() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed left-0 right-0 top-0 z-50 border-b border-white/[0.04] bg-chrome-void/60 backdrop-blur-2xl"
+      className="fixed left-0 right-0 top-0 z-50 border-b border-white/[0.04] bg-black/60 backdrop-blur-2xl"
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6">
         <a
@@ -56,13 +56,13 @@ export function Navigation() {
               href={contact.githubHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-0.5 py-1 text-[13px] font-medium text-chrome-steel transition-colors hover:text-white"
+              className="px-0.5 py-1 text-[13px] font-medium text-white/50 transition-colors hover:text-white"
             >
               GitHub
             </a>
           </li>
           <li>
-            <ResumePdfLink className="ml-2 inline-flex items-center rounded-full border border-accent/25 px-4 py-1.5 text-xs font-medium tracking-wide text-chrome-steel transition-all hover:border-accent/50 hover:text-white hover:shadow-[0_0_20px_-6px_rgba(59,130,246,0.3)]">
+            <ResumePdfLink className="ml-2 inline-flex items-center rounded-full border border-white/15 px-4 py-1.5 text-xs font-medium tracking-wide text-white/50 transition-all hover:border-white/30 hover:text-white hover:shadow-[0_0_20px_-6px_rgba(255,255,255,0.15)]">
               Resume
             </ResumePdfLink>
           </li>
@@ -77,15 +77,15 @@ export function Navigation() {
         >
           <motion.span
             animate={open ? { rotate: 45, y: 4 } : { rotate: 0, y: 0 }}
-            className="block h-px w-5 bg-chrome-silver"
+            className="block h-px w-5 bg-white/60"
           />
           <motion.span
             animate={open ? { opacity: 0 } : { opacity: 1 }}
-            className="block h-px w-5 bg-chrome-silver"
+            className="block h-px w-5 bg-white/60"
           />
           <motion.span
             animate={open ? { rotate: -45, y: -4 } : { rotate: 0, y: 0 }}
-            className="block h-px w-5 bg-chrome-silver"
+            className="block h-px w-5 bg-white/60"
           />
         </button>
       </nav>
@@ -97,7 +97,7 @@ export function Navigation() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-t border-white/[0.04] bg-chrome-void/95 backdrop-blur-2xl md:hidden"
+            className="overflow-hidden border-t border-white/[0.04] bg-black/95 backdrop-blur-2xl md:hidden"
           >
             <ul className="flex flex-col gap-0.5 px-4 py-4">
               {links.map((l, i) => (
@@ -109,7 +109,7 @@ export function Navigation() {
                 >
                   <a
                     href={l.href}
-                    className="block py-2.5 text-sm font-medium text-chrome-steel transition-colors hover:text-white"
+                    className="block py-2.5 text-sm font-medium text-white/50 transition-colors hover:text-white"
                     onClick={() => setOpen(false)}
                   >
                     {l.label}
@@ -125,7 +125,7 @@ export function Navigation() {
                   href={contact.githubHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block py-2.5 text-sm font-medium text-chrome-steel"
+                  className="block py-2.5 text-sm font-medium text-white/50"
                   onClick={() => setOpen(false)}
                 >
                   GitHub
@@ -140,7 +140,7 @@ export function Navigation() {
                 }}
               >
                 <ResumePdfLink
-                  className="block py-2.5 text-sm font-medium text-chrome-steel"
+                  className="block py-2.5 text-sm font-medium text-white/50"
                   onNavigate={() => setOpen(false)}
                 >
                   Resume

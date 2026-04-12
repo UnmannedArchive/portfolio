@@ -16,14 +16,14 @@ export function About() {
           <div>
             <MotionSection>
               <SectionLabel>About</SectionLabel>
-              <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl md:text-[2.5rem]">
+              <h2 className="chrome-text-static mt-5 font-display text-3xl italic leading-snug sm:text-4xl md:text-[2.5rem]">
                 When The Math Has To Hold And The Story Has To Land.
               </h2>
             </MotionSection>
 
             <MotionSection
               delay={0.08}
-              className="mt-8 space-y-5 text-base leading-[1.85] text-chrome-steel"
+              className="mt-8 space-y-5 text-base leading-[1.85] text-white/50"
             >
               <p className="max-w-3xl">
                 I&apos;m happiest when I&apos;m translating between worlds—code
@@ -46,7 +46,7 @@ export function About() {
             delay={0.06}
             className="mx-auto w-full max-w-[220px] lg:mx-0 lg:max-w-none"
           >
-            <div className="glass-card flex aspect-square w-full max-w-[220px] items-center justify-center overflow-hidden rounded-xl lg:max-w-none">
+            <div className="flex aspect-square w-full max-w-[220px] items-center justify-center overflow-hidden rounded-xl border border-white/[0.08] bg-white/[0.02] lg:max-w-none">
               <Image
                 src="/images/headshot.png"
                 alt="Joseph Solomon"

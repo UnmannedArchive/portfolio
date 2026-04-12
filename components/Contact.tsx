@@ -17,10 +17,10 @@ export function Contact() {
       <div className="mx-auto max-w-6xl">
         <MotionSection>
           <SectionLabel>Contact</SectionLabel>
-          <h2 className="mt-5 font-display text-3xl italic leading-snug text-white sm:text-4xl">
+          <h2 className="chrome-text-static mt-5 font-display text-3xl italic leading-snug sm:text-4xl">
             Say Hello
           </h2>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-chrome-steel">
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/50">
             Internships, collaborations, or introductions related to Lattice,
             Mariner, Marshall Behavioral Lab, BlackGen, and 180 Degrees
             Consulting.
@@ -28,17 +28,17 @@ export function Contact() {
         </MotionSection>
 
         <MotionSection delay={0.05} className="glass-card mt-8 rounded-lg p-6">
-          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/70">
+          <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-white/35">
             What I&apos;m Optimizing For
           </p>
-          <p className="mt-3 text-sm leading-relaxed text-chrome-steel">
+          <p className="mt-3 text-sm leading-relaxed text-white/50">
             I&apos;m actively interested in{" "}
-            <strong className="font-medium text-chrome-silver">
+            <strong className="font-medium text-white/80">
               2026 internships and new-grad roles
             </strong>{" "}
             spanning investing, product, and data/ML at the boundary of finance
             — and in{" "}
-            <strong className="font-medium text-chrome-silver">
+            <strong className="font-medium text-white/80">
               co-founder / advisor
             </strong>{" "}
             conversations where Lattice&apos;s wedge is a fit. Also open to
@@ -49,7 +49,7 @@ export function Contact() {
 
         <MotionSection delay={0.06} className="mt-12">
           <SectionLabel>Resume</SectionLabel>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-chrome-steel">
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/50">
             PDF — file size is approximate.
           </p>
           <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
@@ -63,13 +63,13 @@ export function Contact() {
               transition={{ type: "spring", stiffness: 400, damping: 28 }}
               className="glass-card flex flex-1 flex-col justify-center rounded-lg px-6 py-5 sm:min-w-[240px] sm:max-w-sm"
             >
-              <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/70">
+              <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-white/35">
                 {resume.label}
               </span>
-              <span className="mt-2 text-base font-medium text-chrome-silver">
+              <span className="mt-2 text-base font-medium text-white/70">
                 Download PDF →
               </span>
-              <span className="mt-1 font-mono text-[11px] text-chrome-mist">
+              <span className="mt-1 font-mono text-[11px] text-white/30">
                 {resume.sizeLabel}
               </span>
             </motion.a>
@@ -89,10 +89,10 @@ export function Contact() {
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.99 }}
             transition={{ type: "spring", stiffness: 400, damping: 28 }}
-            className="group relative flex flex-col justify-center overflow-hidden rounded-lg p-[1px] bg-gradient-to-br from-accent/30 via-white/10 to-transparent lg:col-span-2"
+            className="group relative flex flex-col justify-center overflow-hidden rounded-lg p-[1px] bg-gradient-to-br from-white/20 via-white/5 to-transparent lg:col-span-2"
           >
-            <div className="flex flex-1 flex-col justify-center rounded-lg bg-chrome-void/90 px-6 py-5 backdrop-blur-md">
-              <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/70">
+            <div className="flex flex-1 flex-col justify-center rounded-lg bg-black/90 px-6 py-5 backdrop-blur-md">
+              <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-white/35">
                 Email
               </span>
               <span className="mt-2 text-sm font-medium text-white sm:text-base">
@@ -107,10 +107,10 @@ export function Contact() {
             transition={{ type: "spring", stiffness: 400, damping: 28 }}
             className="glass-card flex flex-col justify-center rounded-lg px-6 py-5"
           >
-            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/60">
+            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-white/30">
               Phone
             </span>
-            <span className="mt-2 text-sm font-medium text-chrome-silver sm:text-base">
+            <span className="mt-2 text-sm font-medium text-white/70 sm:text-base">
               {contact.phoneDisplay}
             </span>
           </motion.a>
@@ -123,10 +123,10 @@ export function Contact() {
             transition={{ type: "spring", stiffness: 400, damping: 28 }}
             className="glass-card flex flex-col justify-center rounded-lg px-6 py-5"
           >
-            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/60">
+            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-white/30">
               LinkedIn
             </span>
-            <span className="mt-2 text-sm font-medium text-chrome-silver sm:text-base">
+            <span className="mt-2 text-sm font-medium text-white/70 sm:text-base">
               Profile →
             </span>
           </motion.a>
@@ -139,10 +139,10 @@ export function Contact() {
             transition={{ type: "spring", stiffness: 400, damping: 28 }}
             className="glass-card flex flex-col justify-center rounded-lg px-6 py-5 sm:col-span-2 lg:col-span-4"
           >
-            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-accent/60">
+            <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-white/30">
               GitHub
             </span>
-            <span className="mt-2 text-sm font-medium text-chrome-silver sm:text-base">
+            <span className="mt-2 text-sm font-medium text-white/70 sm:text-base">
               {contact.githubHref.replace("https://", "")} →
             </span>
           </motion.a>
