@@ -48,19 +48,13 @@ export function About() {
           >
             <div className="glass-card flex aspect-square w-full max-w-[220px] items-center justify-center overflow-hidden rounded-xl lg:max-w-none">
               <Image
-                src="/images/headshot.svg"
-                alt=""
+                src="/images/headshot.png"
+                alt="Joseph Solomon"
                 width={400}
                 height={400}
-                className="h-full w-full object-contain"
+                className="h-full w-full object-cover"
               />
             </div>
-            <p className="mt-2 text-center text-xs text-chrome-mist lg:text-left">
-              Swap in your photo — replace{" "}
-              <code className="rounded bg-white/5 px-1">
-                public/images/headshot.svg
-              </code>
-            </p>
           </MotionSection>
         </div>
       </div>

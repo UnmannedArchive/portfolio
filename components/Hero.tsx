@@ -140,7 +140,6 @@ export function Hero() {
         >
           <StatBlock value="5+" label="Ventures" delay={0.65} />
           <StatBlock value="2" label="Degrees" delay={0.72} />
-          <StatBlock value="40+" label="Students Mentored" delay={0.79} />
           <div className="hidden flex-1 items-center gap-3 sm:flex">
             <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent" />
             <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-chrome-mist/40">
