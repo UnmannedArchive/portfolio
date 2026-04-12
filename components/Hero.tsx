@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { ResumePdfLink } from "@/components/ResumePdfLink";
 import { Starfield } from "@/components/Starfield";
 
@@ -40,27 +39,6 @@ export function Hero() {
       className="relative z-10 flex min-h-[100dvh] flex-col justify-center overflow-hidden px-4 sm:px-6"
     >
       <Starfield />
-
-      {/* Chrome figure — positioned right */}
-      <motion.div
-        initial={{ opacity: 0, scale: 1.05 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        className="pointer-events-none absolute -right-[10%] bottom-0 top-0 hidden w-[55%] select-none items-center justify-center lg:flex"
-      >
-        <div className="relative h-full w-full">
-          <Image
-            src="/images/chrome-figure.png"
-            alt=""
-            fill
-            className="object-contain object-right-bottom opacity-40"
-            priority
-            sizes="55vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60" />
-        </div>
-      </motion.div>
 
       {/* Horizontal chrome line */}
       <motion.div
