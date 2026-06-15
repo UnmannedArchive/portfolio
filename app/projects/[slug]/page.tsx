@@ -77,6 +77,31 @@ export default function ProjectPage({ params }: Props) {
         </h1>
         <p className="mt-2 text-lg text-chrome-silver">{p.tagline}</p>
 
+        {(p.liveUrl || p.repo) && (
+          <div className="mt-5 flex flex-wrap gap-3">
+            {p.liveUrl && (
+              <a
+                href={p.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded border border-accent/40 bg-accent/[0.12] px-4 py-2 text-sm font-semibold text-white transition hover:bg-accent/20"
+              >
+                View live demo →
+              </a>
+            )}
+            {p.repo && (
+              <a
+                href={p.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded border border-accent/20 bg-accent/[0.06] px-4 py-2 text-sm font-semibold text-accent transition hover:border-accent/40 hover:text-white"
+              >
+                View source on GitHub →
+              </a>
+            )}
+          </div>
+        )}
+
         <section className="mt-10 space-y-4">
           <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-accent/70">
             The Problem

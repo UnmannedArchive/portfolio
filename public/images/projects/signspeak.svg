@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#0a0a0e"/>
+  <path d="M0 300 Q200 230 400 280 T800 260 V450 H0Z" fill="url(#g)" opacity="0.35"/>
+  <g stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="560,380 470,330 425,300 392,278"/>
+    <polyline points="560,380 540,270 532,205 526,158"/>
+    <polyline points="560,380 568,262 572,188 575,138"/>
+    <polyline points="560,380 600,272 614,205 624,165"/>
+    <polyline points="560,380 628,288 652,242 668,215"/>
+    <path d="M540 270 Q570 250 600 272" opacity="0.5"/>
+  </g>
+  <g fill="#fff">
+    <circle cx="560" cy="380" r="5"/>
+    <circle cx="470" cy="330" r="3"/><circle cx="425" cy="300" r="3"/><circle cx="392" cy="278" r="3.5"/>
+    <circle cx="540" cy="270" r="3"/><circle cx="532" cy="205" r="3"/><circle cx="526" cy="158" r="3.5"/>
+    <circle cx="568" cy="262" r="3"/><circle cx="572" cy="188" r="3"/><circle cx="575" cy="138" r="3.5"/>
+    <circle cx="600" cy="272" r="3"/><circle cx="614" cy="205" r="3"/><circle cx="624" cy="165" r="3.5"/>
+    <circle cx="628" cy="288" r="3"/><circle cx="652" cy="242" r="3"/><circle cx="668" cy="215" r="3.5"/>
+  </g>
+  <defs><linearGradient id="g" x1="400" y1="0" x2="400" y2="450"><stop stop-color="#4a5568"/><stop offset="1" stop-color="#0a0a0e"/></linearGradient></defs>
+  <text x="40" y="60" fill="#fff" font-family="system-ui" font-size="22" font-weight="600">SignSpeak</text>
+  <text x="40" y="90" fill="#aaa" font-family="system-ui" font-size="13">Real-time ASL recognition / MediaPipe + LSTM</text>
+</svg>

@@ -235,36 +235,28 @@ export type ProjectCard = {
 
 export const projects: ProjectCard[] = [
   {
-    slug: "lattice",
-    title: "Lattice",
+    slug: "jarvis-life-os",
+    title: "JARVIS Life OS",
     description:
-      "Pharmaceutical patent analytics for a $14B IP intelligence market — go-to-market, Dorm Room Fund milestone ($200K valuation), LSTM/VLM embeddings over ~3M compounds, and four biopharma design partners.",
-    tags: ["AI/ML", "Patents", "Venture"],
-    image: "/images/projects/lattice.svg",
+      "A gamified personal life operating system with a sci-fi HUD: track 6 life pillars, earn XP, level up, and keep streaks. A smart priority queue auto-ranks daily quests by urgency, streak risk, pillar balance, and energy. Next.js 16 + Zustand + Supabase, deployed on Vercel.",
+    tags: ["Next.js", "TypeScript", "Product"],
+    image: "/images/projects/jarvis.svg",
   },
   {
-    slug: "quant-research",
-    title: "BlackGen Quant Stack",
+    slug: "signspeak",
+    title: "SignSpeak",
     description:
-      "Python ensemble ML (boosting + LSTM), NLP sentiment on earnings and news, and optimization-driven recommendations presented to an investment committee.",
-    tags: ["Python", "Quant", "Research"],
-    image: "/images/orgs/blackgen.png",
+      "Real-time American Sign Language word recognizer: webcam → MediaPipe skeleton → bidirectional LSTM, trained on real WLASL clips (44.1% across 18 signs, ~8× the random baseline), with a Claude layer that renders recognized glosses as fluent English.",
+    tags: ["Python", "PyTorch", "Computer Vision"],
+    image: "/images/projects/signspeak.svg",
   },
   {
-    slug: "behavioral-lab",
-    title: "Behavioral Lab Research & ML",
+    slug: "clearread",
+    title: "ClearRead",
     description:
-      "Large-N behavioral analysis in R/Python/SPSS plus GPT parsers and RLHF evaluation loops for finance-adjacent reasoning tasks.",
-    tags: ["LLM", "RLHF", "Research"],
-    image: "/images/orgs/marshall-behavioral-lab.png",
-  },
-  {
-    slug: "grant-intel",
-    title: "NHF Grant Intelligence",
-    description:
-      "180 Degrees Consulting engagement: NLP-driven grant opportunity scoring across 20+ national sources for the National Health Foundation.",
-    tags: ["NLP", "Social impact", "Consulting"],
-    image: "/images/orgs/180dc.png",
+      "An accessible AI-powered article reader: paste a URL or text and get a Claude-generated summary, plus dyslexia-friendly fonts, bionic reading, adjustable speed-reading, and text-to-speech. Built as a single zero-dependency HTML/CSS/JS app.",
+    tags: ["AI", "Accessibility", "JavaScript"],
+    image: "/images/projects/clearread.svg",
   },
 ];
 

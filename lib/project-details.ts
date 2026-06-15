@@ -7,79 +7,73 @@ export type ProjectDetail = {
   architecture: string;
   outcomes: string[];
   image: string;
+  /** Optional live deployment — shown as a "View live demo" button */
+  liveUrl?: string;
+  /** Optional public source link — shown as a "View source" button */
+  repo?: string;
 };
 
 export const projectDetails: Record<string, ProjectDetail> = {
-  lattice: {
-    title: "Lattice",
-    tagline: "AI-powered pharmaceutical patent analytics",
+  "jarvis-life-os": {
+    title: "JARVIS Life OS",
+    tagline: "A gamified, sci-fi HUD operating system for your life",
     problem:
-      "R&D and IP teams spend heavily on chemical patent search and prior-art analysis. Existing workflows are slow, siloed, and weak on similarity and generative exploration across large compound libraries.",
+      "Habit and productivity apps are easy to abandon — they feel like chores, not progress. JARVIS Life OS reframes self-improvement as a game: every area of your life is a pillar you level up, with the feedback loops (XP, streaks, combos) that make games genuinely sticky.",
     role:
-      "Co-founder owning go-to-market, financial modeling, and technical direction alongside model choices (LSTM/VLM) and embedding ~3M compounds for search and generative chemistry; enterprise traction with four biopharma design partners.",
+      "Solo build of the whole product — the JARVIS HUD interface, the XP/leveling and streak-multiplier economy, the smart priority queue, the character-class system, and an optional Supabase persistence layer (it runs fully in demo mode with no backend).",
     stack: [
-      "Python",
-      "LLM / VLM",
-      "Vector search",
-      "REST APIs",
-      "Financial modeling",
+      "Next.js 16",
+      "TypeScript",
+      "Zustand",
+      "Supabase",
+      "Framer Motion",
+      "Tailwind CSS",
     ],
     architecture:
-      "Compound ingestion → embedding models (LSTM/VLM) → vector index for similarity and generative workflows → APIs and product surfaces for partner pilots; layered with unit economics and revenue hypotheses for Dorm Room Fund diligence.",
+      "Six life pillars (Mind, Body, Work, Wealth, Spirit, Social) each carry XP, level, and streak state in Zustand. A priority engine ranks daily quests by urgency, streak risk, pillar balance, energy, and difficulty flow; completing them awards XP with streak multipliers, multi-pillar combo bonuses, and perfect-day rewards, and your dominant pillar evolves your character class. Supabase backs persistence and auth when configured; otherwise everything runs client-side in demo mode.",
     outcomes: [
-      "Pitched to VC judges and 200+ attendees; LavaLab Best Product and Judges’ Choice; $200K valuation milestone with Dorm Room Fund.",
-      "Four biopharma design partners via enterprise outreach.",
-      "Targeting a large IP-intelligence market with clear wedge in chemical patent analytics.",
+      "Playable end to end with sample data out of the box — no backend required.",
+      "A complete game economy: difficulty-tiered XP, streak multipliers up to 2.0×, multi-pillar combo and perfect-day bonuses, and a radar chart for life balance.",
+      "Deployed live on Vercel.",
     ],
-    image: "/images/projects/lattice.svg",
+    image: "/images/projects/jarvis.svg",
+    liveUrl: "https://jarvis-life-os-theta.vercel.app",
+    repo: "https://github.com/UnmannedArchive/jarvis-life-os",
   },
-  "quant-research": {
-    title: "BlackGen Quant Stack",
-    tagline: "Signals, ensembles, and committee-ready recommendations",
+  signspeak: {
+    title: "SignSpeak",
+    tagline: "Real-time ASL word recognition — skeleton in, English out",
     problem:
-      "Student investment groups need reproducible research pipelines—from alternative data and fundamentals to portfolio construction—without relying on ad hoc spreadsheets.",
+      "Full ASL translation — connected signing, with grammar carried by facial expression and the space around the signer — is an open research problem. SignSpeak deliberately does the part that genuinely works well: isolated, word-level recognition, in real time from a plain webcam, and stays honest about that scope.",
     role:
-      "Portfolio analyst building proprietary Python pipelines: gradient boosting + LSTM ensembles, NLP sentiment on earnings and news, DCFs and comps, and mean-variance optimization for committee presentations.",
-    stack: ["Python", "Pandas", "ML ensembles", "LSTM", "NLP", "Excel"],
+      "Solo build, end to end: the MediaPipe landmark pipeline, the bidirectional LSTM classifier, landmark-space data augmentation, the WLASL download/training tooling, and the OpenCV live demo — plus a Claude layer that turns recognized glosses into fluent English.",
+    stack: ["Python", "PyTorch", "MediaPipe", "OpenCV", "Claude API"],
     architecture:
-      "Data ingest (prices, transcripts, news) → feature store → ensemble models for alpha signals → optimization layer → memo and deck outputs for investment committee.",
+      "The core trick: never feed pixels to the model. Every frame — recorded WLASL clip or live webcam — is reduced to a normalized skeleton of hand and upper-body landmarks, which strips away signer appearance, background, and resolution, so a model trained on WLASL can recognize you. Pipeline: webcam / WLASL video → MediaPipe Holistic → normalized skeleton → bidirectional LSTM (temporal mean-pooling) → word → optional Claude pass for fluent English.",
     outcomes: [
-      "Cross-sector equity work in technology and healthcare with DCF and comparable-company frameworks.",
-      "Systematic signals and portfolio construction narratives presented to BlackGen leadership.",
+      "44.1% held-out test accuracy across 18 signs — ~8× the 5.6% random baseline; landmark-space augmentation plus the bidirectional model lifted it from 35.3%.",
+      "Runs immediately: a pre-trained model ships in the repo, and the demo falls back to an offline word-join when no Claude key is set.",
+      "Scoped as a strong proof-of-concept; the clearest next win is simply more clips per gloss to close the WLASL→webcam domain gap.",
     ],
-    image: "/images/orgs/blackgen.png",
+    image: "/images/projects/signspeak.svg",
+    repo: "https://github.com/UnmannedArchive/signspeak",
   },
-  "behavioral-lab": {
-    title: "Behavioral Lab Research & ML",
-    tagline: "Large-N studies, LLM parsers, RLHF evaluation",
+  clearread: {
+    title: "ClearRead",
+    tagline: "An accessible, AI-powered article reader",
     problem:
-      "Behavioral lab researchers need faster turnaround on cleaning, coding, and summarizing large surveys while improving LLM behavior on quantitative and finance-adjacent reasoning.",
+      "Dense articles are a barrier for a lot of readers — dyslexia, ADHD, low vision, or just limited time. ClearRead puts several proven accessibility aids and an AI summary behind one simple reader, so the same article can meet readers where they are.",
     role:
-      "AI research assistant: SPSS/R/Python pipelines, regression and ANOVA, custom GPT-based parser for extraction and classification, and RLHF-style evaluation of model outputs on multi-turn tasks.",
-    stack: ["R", "Python", "SPSS", "GPT", "RLHF evaluation"],
+      "Solo build, shipped as a single self-contained HTML/CSS/JS file with no build step: the reader UI, the reading modes, the Claude summarization call, and the text-to-speech integration.",
+    stack: ["JavaScript", "HTML / CSS", "Claude API", "Web Speech API"],
     architecture:
-      "Raw survey/experiment data → cleaning → statistical modeling → LLM parser for structured extraction → human-in-the-loop review and RLHF feedback loops.",
+      "Paste a URL or text and the article is normalized into a clean reader view. A Claude (claude-sonnet-4-6) call produces the summary; the browser's SpeechSynthesis API drives text-to-speech; and the reading aids — dyslexia-friendly fonts, bionic reading (bolded word stems), and adjustable speed-reading — are layered as toggleable view transforms. Everything runs client-side in one file.",
     outcomes: [
-      "Parser cut manual analysis by 3+ hours on 1,000+ observation datasets.",
-      "Clearer gains in model accuracy on finance-flavored reasoning benchmarks.",
+      "Multiple accessibility modes in one place: AI summaries, dyslexia-friendly type, bionic reading, speed reading, and text-to-speech.",
+      "Zero-dependency, single-file app — trivial to host or share.",
     ],
-    image: "/images/orgs/marshall-behavioral-lab.png",
-  },
-  "grant-intel": {
-    title: "NHF Grant Intelligence",
-    tagline: "180 Degrees Consulting · NLP grant scoring",
-    problem:
-      "National Health Foundation needed to prioritize dozens of national funding opportunities by expected value and strategic fit—without purely manual spreadsheet review.",
-    role:
-      "Senior consultant: designed NLP classification over 20+ funding sources, structured scoring criteria, and ranking aligned to buyside-style research habits.",
-    stack: ["LLM-assisted research", "NLP", "Python", "Structured criteria"],
-    architecture:
-      "Source ingestion → NLP tagging and classification → scoring rubric → ranked shortlist with rationale for leadership.",
-    outcomes: [
-      "Actionable ranked pipeline for capital allocation conversations.",
-      "Analogous to portfolio construction: diversifying bets across mission alignment and financial fit.",
-    ],
-    image: "/images/orgs/180dc.png",
+    image: "/images/projects/clearread.svg",
+    repo: "https://github.com/UnmannedArchive/clearread",
   },
 };
 

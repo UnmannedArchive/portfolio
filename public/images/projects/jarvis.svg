@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#06090a"/>
+  <g stroke="#22d3ee" fill="none" opacity="0.5">
+    <polygon points="600,120 685,170 685,270 600,320 515,270 515,170" stroke-width="1.5"/>
+    <polygon points="600,165 648,193 648,247 600,275 552,247 552,193" stroke-width="1.2" opacity="0.7"/>
+  </g>
+  <g stroke="#34d399" stroke-width="1" opacity="0.45">
+    <line x1="600" y1="60" x2="600" y2="380"/>
+    <line x1="470" y1="220" x2="730" y2="220"/>
+  </g>
+  <polygon points="600,178 642,205 628,255 572,250 562,200" fill="#34d399" opacity="0.18" stroke="#34d399" stroke-width="1"/>
+  <g fill="#22d3ee">
+    <circle cx="600" cy="178" r="3"/><circle cx="642" cy="205" r="3"/><circle cx="628" cy="255" r="3"/><circle cx="572" cy="250" r="3"/><circle cx="562" cy="200" r="3"/>
+  </g>
+  <g stroke="#34d399" stroke-width="1.5" opacity="0.6">
+    <path d="M40 410 H120"/><path d="M140 410 H180"/>
+  </g>
+  <text x="40" y="60" fill="#fff" font-family="system-ui" font-size="22" font-weight="600">JARVIS Life OS</text>
+  <text x="40" y="90" fill="#7dd3c8" font-family="system-ui" font-size="13">Gamified life OS / sci-fi HUD</text>
+</svg>
