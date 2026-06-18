@@ -56,6 +56,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
       "Scoped as a strong proof-of-concept; the clearest next win is simply more clips per gloss to close the WLASL→webcam domain gap.",
     ],
     image: "/images/projects/signspeak.svg",
+    liveUrl: "https://asl-web-one.vercel.app",
     repo: "https://github.com/UnmannedArchive/signspeak",
   },
   clearread: {
