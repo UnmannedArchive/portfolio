@@ -73,6 +73,7 @@ export const projectDetails: Record<string, ProjectDetail> = {
       "Zero-dependency, single-file app — trivial to host or share.",
     ],
     image: "/images/projects/clearread.svg",
+    liveUrl: "https://clearread-eight.vercel.app",
     repo: "https://github.com/UnmannedArchive/clearread",
   },
 };

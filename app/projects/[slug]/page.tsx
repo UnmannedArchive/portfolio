@@ -12,14 +12,15 @@ import {
 } from "@/lib/org-logos";
 import type { Metadata } from "next";
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
   return getProjectSlugs().map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const p = projectDetails[params.slug];
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const p = projectDetails[slug];
   if (!p) return {};
   return {
     title: `${p.title} — Joseph Solomon`,
@@ -27,8 +28,9 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function ProjectPage({ params }: Props) {
-  const p = projectDetails[params.slug];
+export default async function ProjectPage({ params }: Props) {
+  const { slug } = await params;
+  const p = projectDetails[slug];
   if (!p) notFound();
   const mbrlHero = isMbrlLogo(p.image);
 
