@@ -27,13 +27,8 @@ export function Projects() {
             Case Studies: Problem, Stack, Outcome
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/50">
-            Each card opens a short case write-up — problem, stack, and
-            outcomes. Some cards use partner or organization logos; swap in
-            product screenshots anytime under{" "}
-            <code className="rounded bg-white/[0.06] px-1.5 py-0.5 font-mono text-xs text-white/60">
-              public/images/projects/
-            </code>
-            .
+            Each card opens a short case write-up — the problem, the stack, and
+            what came out of it.
           </p>
         </MotionSection>
 

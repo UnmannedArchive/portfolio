@@ -152,21 +152,6 @@ export default async function ProjectPage({ params }: Props) {
           </ul>
         </section>
 
-        <section className="glass-card mt-10 rounded-lg p-6">
-          <h2 className="font-mono text-[10px] uppercase tracking-[0.22em] text-accent/70">
-            More Visuals
-          </h2>
-          <p className="mt-2 text-sm text-chrome-mist">
-            Add screenshots, diagrams, or demo links here. Hero art is set in{" "}
-            <code className="rounded bg-white/5 px-1 text-xs">
-              lib/project-details.ts
-            </code>{" "}
-            (paths under{" "}
-            <code className="rounded bg-white/5 px-1 text-xs">public/</code>
-            ).
-          </p>
-        </section>
-
         <p className="mt-12 text-center">
           <Link
             href="/#contact"
